@@ -1,0 +1,114 @@
+https://www.google.com/search?client=firefox-b-d&sca_esv=5d466d0b992978df&sxsrf=AHTn8zoqNmX7eJEmezWpWqnK954RC9bK7A:1740589524985&q=Galactic+Tech+Map&udm=2&fbs=ABzOT_C6HZESFBpD-a6wBwrIm2041RevU0T3J6J8ChyWSMUzXjvqXYObV1EHFrH7DNUYpFpEqrs4YYNIETrz9yMzVLlal3StBsZ37RqnJe2xpMRAmTUqXffzymXm3CfpQjjdNwHXc8OeSLbt6mOMecxF1F80RUqvGcge5nz6foZe5jpNxHgTbDwAdp9PlC4V1_Ygotj3mwjFpHc77twhXwWfuLxA44pp-Q&sa=X&ved=2ahUKEwiZoNii6eGLAxX6QvEDHZNzBfMQtKgLegQICxAB&biw=1536&bih=703&dpr=1.25#imgrc=86W_CD7PBdx2vM&imgdii=pT85iZMwIhEslM
+
+https://codepen.io/hakimel/details/bzrZGo
+
+https://codepen.io/uiswarup/pen/oNXYNOB
+
+https://codepen.io/davekwiatkowski/pen/LyvXWK
+
+https://codepen.io/notduncansmith/pen/ogbwEv
+
+https://codepen.io/aderaaij/pen/oNBWEWv : background
+
+https://www.google.com/search?client=firefox-b-d&sca_esv=5d466d0b992978df&sxsrf=AHTn8zoqNmX7eJEmezWpWqnK954RC9bK7A:1740589524985&q=Galactic+Tech+Map&udm=2&fbs=ABzOT_C6HZESFBpD-a6wBwrIm2041RevU0T3J6J8ChyWSMUzXjvqXYObV1EHFrH7DNUYpFpEqrs4YYNIETrz9yMzVLlal3StBsZ37RqnJe2xpMRAmTUqXffzymXm3CfpQjjdNwHXc8OeSLbt6mOMecxF1F80RUqvGcge5nz6foZe5jpNxHgTbDwAdp9PlC4V1_Ygotj3mwjFpHc77twhXwWfuLxA44pp-Q&sa=X&ved=2ahUKEwiZoNii6eGLAxX6QvEDHZNzBfMQtKgLegQICxAB&biw=1536&bih=703&dpr=1.25#imgrc=86W_CD7PBdx2vM&imgdii=pT85iZMwIhEslM
+
+***
+while kommand do i nedd to the project with the project structur Deine Projektidee klingt wirklich faszinierend! Hier ist eine strukturierte Übersicht, wie das Projekt umgesetzt werden kann, einschließlich der grundlegenden Struktur und Schritte, um die interaktive galaktische Karte der Technologien zu erstellen.
+Projektübersicht: Interaktive Galaktische Karte der Technologien
+1. Technologischer Stack
+
+    Frontend:
+        React für die Benutzeroberfläche
+        TypeScript für Typensicherheit
+        Three.js für 3D-Darstellung
+        Tailwind CSS für die Gestaltung
+    Backend (optional):
+        Node.js mit Express für APIs und Serverlogik
+    Datenquellen:
+        Web-Scraping mit Cheerio oder Puppeteer
+        Unsplash API für Bilder
+        MDN API für technische Informationen
+    Hosting:
+        Vercel für Frontend
+        Render für Backend (falls erforderlich)
+
+2. Projektstruktur
+
+my-galactic-map/
+│
+├── public/               # Statische Dateien
+│   ├── index.html       # Haupt-HTML-Datei
+│   └── assets/          # Bilder und Icons
+│
+├── src/
+│   ├── components/      # React-Komponenten
+│   │   ├── Star.jsx     # Komponente für eine Technologie (Stern)
+│   │   ├── Card.jsx     # Komponente für die Informationskarte
+│   │   └── Galaxy.jsx   # Komponente für die Galaxie
+│   │
+│   ├── hooks/           # Benutzerdefinierte Hooks
+│   │   └── useFetch.js  # Hook zum Abrufen von Daten
+│   │
+│   ├── styles/          # CSS-Dateien
+│   │   └── tailwind.css
+│   │
+│   ├── App.jsx          # Hauptanwendung
+│   └── index.js         # Einstiegspunkt der Anwendung
+│
+├── server/              # Backend-Ordner (optional)
+│   ├── server.js        # Server-Setup
+│   └── routes/          # API-Routen
+│
+└── package.json         # Projektkonfiguration
+
+3. Implementierungsschritte
+
+a. Setze das Projekt auf:
+
+    Initialisiere ein neues React-Projekt mit TypeScript:
+
+npx create-react-app my-galactic-map --template typescript
+cd my-galactic-map
+
+Installiere notwendige Pakete:
+
+    npm install three @react-three/fiber @react-three/drei axios tailwindcss
+
+b. Erstelle die Galaxie:
+
+    Verwende @react-three/fiber, um die 3D-Galaxie zu erstellen:
+        Definiere die Sterne als Komponenten, die bei einem Klick eine Informationskarte anzeigen.
+
+c. Daten abrufen:
+
+    Implementiere den Web-Scraper oder API-Anfragen in useFetch.js, um Technologieinformationen abzurufen.
+    Beispiel einer API-Anfrage mit Axios:
+
+    import axios from 'axios';
+
+    const fetchData = async () => {
+      const response = await axios.get('DEINE_API_URL');
+      return response.data;
+    };
+
+d. Interaktive Komponenten erstellen:
+
+    Star.jsx: Visualisiere die Technologie als Stern.
+    Card.jsx: Erstelle eine Karte mit Informationen, Bildern und Links.
+
+e. Benutzeroberfläche gestalten:
+
+    Nutze Tailwind CSS für stilvolle und responsive Designs.
+    Implementiere Animationen für die Sterne und die Galaxie.
+
+f. Fortschrittsverfolgung:
+
+    Implementiere eine Möglichkeit für Benutzer, ihren Fortschritt zu speichern (z.B. in localStorage).
+
+g. Zukünftige Verbesserungen:
+
+    Füge zusätzliche Funktionen hinzu, wie Audioeffekte, Zoom und Rotation der Galaxie.
+
+4. Nächste Schritte
+
+Möchtest du, dass ich einen spezifischen Teil der Implementierung ausarbeite, z.B. die 3D-Galaxie mit Three.js oder die API-Integration? Ich kann dir auch Codebeispiele und Tipps geben! 🚀

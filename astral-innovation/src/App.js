@@ -1,11 +1,8 @@
-import './App.css';
+import React from "react";
+import Galaxy from "./components/Galaxy";
 
-function App() {
-  return (
-    <div className="App">
-     App
-    </div>
-  );
-}
+const App = () => {
+  return <Galaxy />;
+};
 
 export default App;
