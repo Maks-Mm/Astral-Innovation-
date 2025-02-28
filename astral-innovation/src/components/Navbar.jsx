@@ -9,7 +9,7 @@ const NavBar = () => {
       <Link to="/" className={styles.navItem}>Home</Link>
       <Link to="/AboutUs" className={styles.navItem}>About Us</Link>
       <Link to="/Contacts" className={styles.navItem}>Contacts</Link>
-      <Link to="/UserPanel" className={styles.navItem}>User Panel</Link>
+      <Link to="/Technologies" className={styles.navItem}>Technologies</Link>
     </nav>
   );
 };

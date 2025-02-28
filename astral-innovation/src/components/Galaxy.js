@@ -11,6 +11,7 @@ Edge: Ctrl + Shift + I (Windows/Linux) or Cmd + Option + I (Mac)
 */
 
 const Galaxy = () => {
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -222,6 +223,7 @@ const Galaxy = () => {
       }}
     />
   );
+
 };
 
 export default Galaxy;

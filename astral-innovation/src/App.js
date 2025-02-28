@@ -4,7 +4,7 @@ import Galaxy from "./components/Galaxy";
 import BackgroundMusic from "./components/BackgroundMusic";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
-import UserPanel from "./components/pages/UserPanel";
+import Technologies from "./components/pages/Technologies";
 import AboutUs from "./components/pages/AboutUs";
 import Contacts from "./components/pages/Contacts";
 //import Navigation from "./components/Navigation"; // If you have a separate Navigation component
@@ -17,10 +17,10 @@ const App = () => {
       <Galaxy />
       <NavBar /> {/* Ensure NavBar is rendered */}
       <Routes>
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="/" element={<Home />} />
-        <Route path="/UserPanel" element={<UserPanel />} />
+        <Route path="/Technologies" element={<Technologies />} />
       </Routes>
       <BackgroundMusic />
     </div>

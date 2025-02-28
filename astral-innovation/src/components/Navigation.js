@@ -9,7 +9,7 @@ const Navigation = () => {
       <Link to="/">Home</Link>
       <Link to="/AboutUs">About Us</Link> {/* Check this link */}
       <Link to="/Contacts">Contacts</Link>
-      <Link to="/UserPanel">User Panel</Link>
+      <Link to="/Technologies">Technologies</Link>
     </nav>
   );
 };
