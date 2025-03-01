@@ -1,18 +1,14 @@
 import React from "react";
+import "./Card.css"; // Assuming you have specific styles for the card
 
-function Card({ tech }) {
+const Card = ({ tech }) => {
   return (
-    <div key={tech.id} className="technology-card">
+    <div className="technology-card">
+      <img src={tech.image} alt={tech.name} /> {/* Assuming tech has an image field */}
       <h2>{tech.name}</h2>
-      <img
-        src={tech.imageUrl}
-        alt={tech.name}
-        style={{ width: "100px", height: "100px" }}
-      />
-
-      <p>{tech.description}</p>
+      <p>{tech.description}</p> {/* Assuming tech has a description field */}
     </div>
   );
-}
+};
 
 export default Card;
