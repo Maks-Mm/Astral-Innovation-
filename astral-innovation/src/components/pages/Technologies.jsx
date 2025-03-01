@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import './Technologies.css'; // Import the CSS file
+import "./Technologies.css"; // Import the CSS file
+import Card from "../infoCards/Card";
 
 function Technologies() {
   const [technologies, setTechnologies] = useState([]);
@@ -29,20 +30,15 @@ function Technologies() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="page">
       <h1>Technologies</h1>
 
       <div className="technologies-container">
         {technologies.map((tech) => (
-          <div key={tech.id} className="technology-card">
-            <h2>{tech.name}</h2>
-            <img
-              src={tech.imageUrl}
-              alt={tech.name}
-              style={{ width: "100px", height: "100px" }}
-            />
-            <p>{tech.description}</p>
-          </div>
+          <Card key={tech.id} tech={tech} />
+        ))}
+        {technologies.map((tech) => (
+          <Card key={tech.id} tech={tech} />
         ))}
       </div>
     </div>
