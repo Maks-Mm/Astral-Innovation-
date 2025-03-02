@@ -8,7 +8,7 @@ function Footer() {
         <p className="text-white">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <footer className="bg-gray-800 p-4 text-center text-white">
-        <p>&copy; 2025, All rights reserved</p>
+        <p>&copy; 2025  All rights reserved</p>
       </footer>
     </div>
   );
