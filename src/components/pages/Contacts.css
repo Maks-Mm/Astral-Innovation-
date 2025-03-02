@@ -9,11 +9,7 @@
   padding: 50px; /* Padding around the container */
 }
 
-.title {
-  color: white;
-  font-size: 2rem; /* Font size for the title */
-  margin-bottom: 24px; /* Space below the title */
-}
+
 
 .grid {
   display: flex; /* Use flexbox for grid layout */

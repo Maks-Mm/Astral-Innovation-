@@ -1,5 +1,8 @@
 import React from "react";
-import './Contacts.css'; // Import the CSS file
+import { FaYoutube, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaViber, FaWhatsapp } from "react-icons/fa6";
+import "./Contacts.css"; // Import the CSS file
 
 const contacts = [
   {
@@ -7,13 +10,13 @@ const contacts = [
     name: "John Doe",
     phone: "+1 234 567 890",
     social: {
-      youtube: "youtube.com/johndoe",
-      github: "github.com/johndoe",
-      gmail: "johndoe@gmail.com",
-      viber: "viber://johndoe",
-      whatsapp: "whatsapp://johndoe",
-      instagram: "instagram.com/johndoe",
-      facebook: "facebook.com/johndoe",
+      youtube: "https://www.youtube.com/@johndoe",
+      github: "https://github.com/johndoe",
+      gmail: "mailto:johndoe@gmail.com",
+      viber: "viber://chat?number=%2B1234567890",
+      whatsapp: "https://wa.me/1234567890",
+      instagram: "https://www.instagram.com/johndoe",
+      facebook: "https://www.facebook.com/johndoe",
     },
   },
   {
@@ -21,13 +24,13 @@ const contacts = [
     name: "Jane Smith",
     phone: "+44 789 654 321",
     social: {
-      youtube: "youtube.com/janesmith",
-      github: "github.com/janesmith",
-      gmail: "janesmith@gmail.com",
-      viber: "viber://janesmith",
-      whatsapp: "whatsapp://janesmith",
-      instagram: "instagram.com/janesmith",
-      facebook: "facebook.com/janesmith",
+      youtube: "https://www.youtube.com/@janesmith",
+      github: "https://github.com/janesmith",
+      gmail: "mailto:janesmith@gmail.com",
+      viber: "viber://chat?number=%2B44789654321",
+      whatsapp: "https://wa.me/44789654321",
+      instagram: "https://www.instagram.com/janesmith",
+      facebook: "https://www.facebook.com/janesmith",
     },
   },
   {
@@ -35,21 +38,31 @@ const contacts = [
     name: "Alex Brown",
     phone: "+33 123 456 789",
     social: {
-      youtube: "youtube.com/alexbrown",
-      github: "github.com/alexbrown",
-      gmail: "alexbrown@gmail.com",
-      viber: "viber://alexbrown",
-      whatsapp: "whatsapp://alexbrown",
-      instagram: "instagram.com/alexbrown",
-      facebook: "facebook.com/alexbrown",
+      youtube: "https://www.youtube.com/@alexbrown",
+      github: "https://github.com/alexbrown",
+      gmail: "mailto:alexbrown@gmail.com",
+      viber: "viber://chat?number=%2B33123456789",
+      whatsapp: "https://wa.me/33123456789",
+      instagram: "https://www.instagram.com/alexbrown",
+      facebook: "https://www.facebook.com/alexbrown",
     },
   },
 ];
 
+const socialIcons = {
+  youtube: <FaYoutube className="text-red-600" />, 
+  github: <FaGithub className="text-gray-800" />, 
+  gmail: <MdEmail className="text-blue-500" />, 
+  viber: <FaViber className="text-purple-500" />, 
+  whatsapp: <FaWhatsapp className="text-green-500" />, 
+  instagram: <FaInstagram className="text-pink-500" />, 
+  facebook: <FaFacebook className="text-blue-700" />, 
+};
+
 const Contacts = () => {
   return (
     <div className="container">
-      <h1 className="title">Contacts</h1>
+      <h1 className="title text-4xl font-bold text-blue-500 mb-4">Contacts</h1>
       <div className="grid">
         {contacts.map((contact) => (
           <div key={contact.id} className="card">
@@ -59,15 +72,19 @@ const Contacts = () => {
             </div>
             <div className="social-media">
               <p>Social Media:</p>
-              <p>
-                YouTube: {contact.social.youtube} &nbsp; | &nbsp;
-                GitHub: {contact.social.github} &nbsp; | &nbsp;
-                Gmail: {contact.social.gmail} &nbsp; | &nbsp;
-                Viber: {contact.social.viber} &nbsp; | &nbsp;
-                WhatsApp: {contact.social.whatsapp} &nbsp; | &nbsp;
-                Instagram: {contact.social.instagram} &nbsp; | &nbsp;
-                Facebook: {contact.social.facebook}
-              </p>
+              <div className="flex space-x-2">
+                {Object.entries(contact.social).map(([key, value]) => (
+                  <a
+                    key={key}
+                    href={value}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl hover:scale-110 transition-transform"
+                  >
+                    {socialIcons[key]}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         ))}
