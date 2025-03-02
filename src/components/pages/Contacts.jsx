@@ -21,7 +21,7 @@ const contacts = [
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Barse Nowicki",
     phone: "+44 789 654 321",
     social: {
       youtube: "https://www.youtube.com/@janesmith",

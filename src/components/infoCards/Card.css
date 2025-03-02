@@ -1,50 +1,50 @@
 .technology-card {
-    flex: 0 1 250px; /* Flex property to allow cards to grow and shrink */
-    padding: 24px; /* Padding inside each card */
-    border-radius: 12px; /* Rounded corners */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    color: white; /* Text color */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blur effect for glass appearance */
-    position: relative; /* Relative position to place dots */
-    overflow: hidden; /* To ensure the dot doesn't overflow */
-  }
-  
-  /* Dot color effect */
-  .technology-card::before {
-    content: ""; /* Required for pseudo-element */
-    position: absolute; /* Position it relative to the card */
-    top: 10px; /* Adjust vertical position */
-    left: 10px; /* Adjust horizontal position */
-    width: 20px; /* Dot width */
-    height: 20px; /* Dot height */
-    border-radius: 50%; /* Make it circular */
-    background-color: #007acc; /* Color of the dot */
-    z-index: 1; /* Ensure it stays above other content */
-  }
-  
-  .card-header {
-    text-align: center; /* Center align text */
-    margin-bottom: 16px; /* Space below header */
-  }
-  
-  .card-header h2 {
-    font-size: 1.5rem; /* Font size for technology name */
-  }
-  
-  .card-header p {
-    color: rgba(255, 255, 255, 0.7); /* Lighter color for descriptions */
-    font-size: 0.875rem; /* Smaller font size for descriptions */
-  }
-  
-  .social-media {
-    text-align: center; /* Center align text */
-    color: rgba(255, 255, 255, 0.7); /* Lighter color for social media text */
-    font-size: 0.875rem; /* Smaller font size for social media */
-  }
-  
-  .social-media p {
-    margin: 0; /* Remove margin */
-  }
-  
+  flex: 0 1 250px; /* Flex property to allow cards to grow and shrink */
+  padding: 24px; /* Padding inside each card */
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  color: white; /* Text color */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for glass appearance */
+  position: relative; /* Relative position */
+  overflow: hidden; /* Prevent overflow */
+  min-height: 300px; /* Minimum height for the card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Add a fixed size for the images */
+.technology-card img {
+  width: 100px; /* Set a fixed width for the images */
+  height: 100px; /* Set a fixed height for the images */
+  object-fit: contain; /* Ensure the image fits within the specified dimensions without distortion */
+  display: block; /* Center the image */
+  margin: 0 auto; /* Center the image */
+}
+
+.card-header {
+  text-align: center; /* Center align text */
+  margin-bottom: 16px; /* Space below header */
+  padding: 0 10px; /* Optional horizontal padding */
+}
+
+.card-header h2 {
+  font-size: 1.5rem; /* Font size for technology name */
+  margin: 0; /* Reset margin */
+}
+
+.card-header p {
+  color: rgba(255, 255, 255, 0.7); /* Lighter color for descriptions */
+  font-size: 0.875rem; /* Smaller font size for descriptions */
+  margin: 0; /* Reset margin */
+}
+
+.social-media {
+  text-align: center; /* Center align text */
+  color: rgba(255, 255, 255, 0.7); /* Lighter color for social media text */
+  font-size: 0.875rem; /* Smaller font size for social media */
+}
+
+.social-media p {
+  margin: 0; /* Remove margin */
+}

@@ -1,5 +1,6 @@
 // src/components/pages/AboutUs.jsx
 import React from "react";
+import './AboutUs.css'; // Import the CSS file if you're using separate styles
 
 function AboutUs() {
   return (
@@ -16,7 +17,7 @@ function AboutUs() {
           allowFullScreen
         ></iframe>
       </div>
-      <div className="w-1/2 p-4 text-center">
+      <div className="w-1/2 p-4 text-center glass-effect"> {/* Apply the glass effect class here */}
         <h1 className="text-4xl font-bold text-blue-500 mb-4">About Us</h1>
 
         <p className="text-lg text-white max-w-3xl mx-auto">
