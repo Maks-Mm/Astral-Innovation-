@@ -1,22 +1,76 @@
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif;
+}
+
 .home-container {
     max-width: 800px;
     margin: 40px auto; /* Увеличиваем верхний и нижний отступы */
     padding: 20px;
-    background-color: #f9f9f9;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background for glass effect */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    backdrop-filter: blur(10px); /* Blur effect for glass effect */
 }
 
 .home-title {
     text-align: center;
-    color: #333;
+    color: #fffbfb;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .home-text {
     line-height: 1.6;
-    color: #555;
+    color: #fafafa; /* Text color for better readability */
     font-size: 1.2rem;
     margin-bottom: 15px;
+}
+
+.technologies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+    min-height: 100vh; /* Adjust height to fit the viewport */
+}
+
+.technology-card {
+    background: rgba(255, 255, 255, 0.2); /* Transparent background for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for glass effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Fixed width for cards */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+    height: fit-content;
+    backdrop-filter: blur(10px); /* Blur effect for glass effect */
+}
+
+.technology-card:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.technology-card img {
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.technology-card h2 {
+    font-size: 1.5em;
+    color: #007acc; /* Blue color for technology names */
+}
+
+.technology-card p {
+    color: white; /* Dark grey color for descriptions */
+    font-size: 0.9em; /* Smaller font size for descriptions */
+}
+
+.page {
+    height: 96vh;
+    overflow: auto;
 }
