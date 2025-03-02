@@ -1,3 +1,4 @@
+/*
 // src/components/Navigation.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <Link to="/">Home</Link>
-      <Link to="/AboutUs">About Us</Link> {/* Check this link */}
+      <Link to="/AboutUs">About Us</Link> 
       <Link to="/Contacts">Contacts</Link>
       <Link to="/Technologies">Technologies</Link>
     </nav>
@@ -15,3 +16,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+*/

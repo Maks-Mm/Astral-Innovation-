@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+  }
+  
+  .content {
+    flex: 1; /* This will take up all the available space */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  
+  footer {
+    background-color: #2d3748; /* Equivalent to bg-gray-800 */
+  }
+  

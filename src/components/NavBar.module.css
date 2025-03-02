@@ -6,7 +6,7 @@
   justify-content: flex-end;
   position: relative; /* Ensure it stays above the galaxy */
   z-index: 1; /* Make sure it appears above the galaxy */
-  height: 4vh;
+  height: 6vh;
 }
 
 .navItem {

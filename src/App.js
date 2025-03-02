@@ -7,12 +7,11 @@ import Home from "./components/pages/Home";
 import Technologies from "./components/pages/Technologies";
 import AboutUs from "./components/pages/AboutUs";
 import Contacts from "./components/pages/Contacts";
-//import Navigation from "./components/Navigation"; // If you have a separate Navigation component
 import NavBar from "./components/Navbar"; // Ensure this imports correctly
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    //  <Navigation /> {/* Optional: Use this if you have a different navigation component */}
     <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
       <Galaxy />
       <NavBar /> {/* Ensure NavBar is rendered */}
@@ -20,8 +19,9 @@ const App = () => {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/" element={<Home />} />
-        <Route path="/Technologies" element={<Technologies />} />
+        <Route path="/technologies" element={<Technologies />} />
       </Routes>
+      <Footer /> {/* Move Footer here to render on every page */}
       <BackgroundMusic />
     </div>
   );
