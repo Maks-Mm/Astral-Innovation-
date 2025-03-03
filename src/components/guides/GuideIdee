@@ -1,0 +1,78 @@
+here in the file Guids.js i can youtube videos with tutorials of typescript, js or html ,it will a window or icons with suggest to click ,then i play the video with tutorial and little down i bring a place from codepen or sandbox that the tutorial to repied with autor thenks to codepex or sandbox and play icon und tutorial from other resources like node .js ,npm lebrary and and and 
+ChatGPT:
+
+It sounds like you're describing a setup where you can have YouTube tutorial videos for technologies like TypeScript, JavaScript, and HTML, along with links to code examples on platforms like CodePen or CodeSandbox. If you want to create a file named Guids.js that organizes these resources, you might consider structuring it in a way that allows for easy access to the videos and code examples.
+
+Here’s a basic outline of what your Guids.js file could look like, including placeholders for YouTube video links and resources:
+
+const tutorials = [
+  {
+    title: "Introduction to TypeScript",
+    youtubeLink: "https://www.youtube.com/watch?v=example",
+    codePenLink: "https://codepen.io/example",
+    sandboxLink: "https://codesandbox.io/example",
+    additionalResources: [
+      {
+        name: "Node.js Guide",
+        link: "https://nodejs.org/en/docs/guides/",
+      },
+      {
+        name: "npm Documentation",
+        link: "https://docs.npmjs.com/",
+      },
+    ],
+  },
+  {
+    title: "JavaScript Fundamentals",
+    youtubeLink: "https://www.youtube.com/watch?v=example2",
+    codePenLink: "https://codepen.io/example2",
+    sandboxLink: "https://codesandbox.io/example2",
+    additionalResources: [
+      {
+        name: "JavaScript.info",
+        link: "https://javascript.info/",
+      },
+    ],
+  },
+  {
+    title: "HTML & CSS Basics",
+    youtubeLink: "https://www.youtube.com/watch?v=example3",
+    codePenLink: "https://codepen.io/example3",
+    sandboxLink: "https://codesandbox.io/example3",
+    additionalResources: [],
+  },
+];
+
+// Function to display tutorials
+function displayTutorials() {
+  tutorials.forEach((tutorial) => {
+    console.log(`Title: ${tutorial.title}`);
+    console.log(`YouTube: ${tutorial.youtubeLink}`);
+    console.log(`CodePen: ${tutorial.codePenLink}`);
+    console.log(`CodeSandbox: ${tutorial.sandboxLink}`);
+    
+    if (tutorial.additionalResources.length > 0) {
+      console.log("Additional Resources:");
+      tutorial.additionalResources.forEach((resource) => {
+        console.log(`- ${resource.name}: ${resource.link}`);
+      });
+    }
+    console.log('\n'); // New line for better readability
+  });
+}
+
+// Call the function to display tutorials
+displayTutorials();
+
+Explanation:
+
+    Structure: Each tutorial has a title, links to a YouTube video, CodePen, and CodeSandbox, as well as an array of additional resources.
+    Function: The displayTutorials function logs the details of each tutorial to the console, which can be helpful for quickly reviewing the available resources.
+
+Next Steps:
+
+    Fill in the Links: Replace the example URLs with actual links to your desired videos and resources.
+    Expand the List: Add more tutorials or modify existing ones as you find new resources.
+    Run the Script: You can run this JavaScript in a browser console or in a Node.js environment to see the output.
+
+If you have specific features or functionality in mind that you want to add to Guids.js, feel free to let me know!

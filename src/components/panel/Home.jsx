@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css"; // Importing the CSS file
-import Search from "../Search";
+import Search from "../search/Search";
 
 function Home() {
   return (

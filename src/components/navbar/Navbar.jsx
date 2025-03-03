@@ -21,6 +21,9 @@ const NavBar = () => {
       <Link to="/Technologies" className={styles.navItem}>
         Technologies
       </Link>
+      <Link to="/SignUp" className={styles.navItem}>
+      SignUp
+      </Link>
     </nav>
   );
 };
