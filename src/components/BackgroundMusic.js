@@ -16,9 +16,10 @@ const BackgroundMusic = () => {
   }, []);
 
   return (
+     // <source src="musicStop/backgroundMusic.mp3" type="audio/mpeg" />
     <audio ref={audioRef} loop>
-      <source src="/backgroundMusic.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
+      
     </audio>
   );
 };
