@@ -21,8 +21,12 @@ const NavBar = () => {
       <Link to="/Technologies" className={styles.navItem}>
         Technologies
       </Link>
-      <Link to="/SignUp" className={styles.navItem}>
-      SignUp
+
+      <Link to="/login" className={styles.navItem}>
+        Login
+      </Link>
+      <Link to="/register" className={styles.navItem}>
+        Register New Account
       </Link>
     </nav>
   );

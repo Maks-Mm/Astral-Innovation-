@@ -191,7 +191,7 @@ const Galaxy = () => {
     };
 
     window.addEventListener("resize", handleResize);
-//the code block is responsible for the scroll effect
+    //the code block is responsible for the scroll effect
     const handleScroll = (event) => {
       const page = document.querySelector(".page");
       const scrollY = page.scrollTop; // Используем scrollTop для получения позиции прокрутки элемента
