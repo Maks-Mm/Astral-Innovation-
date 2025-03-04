@@ -11,3 +11,11 @@
   display: block;
   outline: none;
 }
+
+.bungee-tint-regular {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+

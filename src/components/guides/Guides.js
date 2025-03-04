@@ -1,18 +1,17 @@
 import React from "react";
 import "./Guides.css"; // Import the CSS file for styles
+import { Link, Outlet } from "react-router-dom";
 
 function Guides() {
   return (
     <div className="guides-container">
-      <img
-        className="guides-image"
-        src="https://images.photowall.com/products/58243/galaxy-1.jpg?h=699&q=85"
-        alt="Galaxy"
-      />
-      <p className="guides-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      <p className="guides-text bungee-tint-regular">
+        <Link to="/react">React </Link>
+        <Link to="/next">NEXT</Link>
+        <Link to="/html">HTML</Link>
+        <Link to="/javaScript">JavaScript</Link>
       </p>
+      <Outlet />
     </div>
   );
 }

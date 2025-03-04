@@ -30,7 +30,7 @@ function Technologies() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="page">
+    <div>
       <h1 className="text-4xl font-bold text-blue-500 mb-4">Technologies</h1>
 
       <div className="technologies-container">

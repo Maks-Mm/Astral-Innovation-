@@ -16,6 +16,8 @@
   
   .guides-text {
     margin: 0; /* Remove default margin */
-    color: white;
+    color: blue;
   }
-  
+  .guides-text a{
+margin-right: 2rem;
+  }
