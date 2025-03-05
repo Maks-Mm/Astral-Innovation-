@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Search.css"; // Ensure you have the styles defined here
 
-const Search = () => {
+const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
-    console.log("Searching for:", query);
+    if (!query.trim()) return; // Prevent empty searches
+    onSearch(query);
   };
 
   return (

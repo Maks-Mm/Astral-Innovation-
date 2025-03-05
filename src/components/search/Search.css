@@ -1,6 +1,7 @@
 .search-container {
     display: flex;
     align-items: center;
+    color: black;
     margin: 20px; /* Adjust margin as needed */
   }
   
