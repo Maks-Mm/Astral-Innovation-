@@ -23,28 +23,3 @@ https://www.google.com/search?client=firefox-b-d&sca_esv=5d466d0b992978df&sxsrf=
       https://nodejs.org/en
 
 command to run the backend server: node server.js
-
-***
-
-That sounds like an amazing and interactive learning experience for beginners! Since you already have the galaxy background with stars and music, as well as a top panel with links, your next steps will focus on implementing clickable elements (stars/planets/etc.) that open a card with fetched or scraped data about a programming technology.
-Feature Breakdown & Implementation Plan
-
-✅ Background & Music (already implemented)
-✅ Top Panel with Links (already implemented)
-🔲 Clickable Elements (Stars, Planets, or Icons)
-🔲 Card Modal that Opens on Click
-🔲 Fetching or Scraping Data on Click
-🔲 Displaying Data (Name, Year, Description, Mind Map, etc.)
-
-
-Final Features Summary
-
-✅ Galaxy Background & Music (Done)
-✅ Clickable Stars for Different Technologies
-✅ Modal/Card That Displays Info
-✅ Fetching API Data or Scraping Wikipedia
-✅ Optional Mind Map for Tech Relationships
-
-This will create an interactive, engaging learning tool for beginners! 🚀
-
-Would you like help styling the UI, adding animations, or integrating more APIs? 😊
