@@ -6,14 +6,17 @@ function Home() {
   const [results, setResults] = useState([]);
 
   const handleSearch = async (query) => {
+    console.log("Search query:", query); // Debug: log the search query
     try {
       const response = await fetch(`http://localhost:3001/search?q=${query}`);
       const data = await response.json();
+      console.log("Search results:", data); // Debug: log the results from the server
       setResults(data); // Store the search results
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
   };
+  
 
   return (
     <div className="home-container">
