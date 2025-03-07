@@ -27,14 +27,14 @@ mongoose.connect("mongodb://localhost:27017/tutorials_db")
         description: "A platform for building mobile and desktop web applications.",
       },
     ])
-    .then(() => {
-      console.log("✅ Sample data inserted!");
-      mongoose.connection.close();
-    })
-    .catch((err) => {
-      console.error("❌ Error inserting data:", err);
-      mongoose.connection.close();
-    });
+      .then(() => {
+        console.log("✅ Sample data inserted!");
+        mongoose.connection.close();
+      })
+      .catch((err) => {
+        console.error("❌ Error inserting data:", err);
+        mongoose.connection.close();
+      });
   })
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err);

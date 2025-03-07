@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+// Home.js
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Search from "../search/Search"; // Ensure you have the correct path to your Search component
 
 function Home() {
   const [results, setResults] = useState([]);
+  const [searchTechnologies, setSearchTechnologies] = useState([]); // Renamed state and setter
+
+  useEffect(() => {
+    const fetchTechnologies = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/technologies");
+        const data = await response.json();
+        setSearchTechnologies(data); // Store the technologies in state
+      } catch (error) {
+        console.error("Error fetching technologies:", error);
+      }
+    };
+
+    fetchTechnologies();
+  }, []);
 
   const handleSearch = async (query) => {
-    console.log("Search query:", query); // Debug: log the search query
     try {
       const response = await fetch(`http://localhost:3001/search?q=${query}`);
       const data = await response.json();
@@ -16,7 +31,6 @@ function Home() {
       console.error("Error fetching search results:", error);
     }
   };
-  
 
   return (
     <div className="home-container">
@@ -37,6 +51,19 @@ function Home() {
         ) : (
           <p>No results found</p>
         )}
+      </div>
+
+      <h2>All Technologies</h2>
+      <div className="technologies-list">
+        <ul>
+          {searchTechnologies.map((tech) => ( // Updated to use searchTechnologies
+            <li key={tech.id}>
+              <img src={tech.imageUrl} alt={tech.name} className="result-image" />
+              <h3>{tech.name}</h3>
+              <p>{tech.description}</p>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <p className="home-text">
