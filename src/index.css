@@ -53,5 +53,6 @@
   height: fit-content;
   backdrop-filter: blur(10px);
   /* Blur effect for glass effect */
+  min-width: 30rem;
 
 }
