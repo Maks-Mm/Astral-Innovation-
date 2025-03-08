@@ -16,15 +16,13 @@ import Html from "./components/guides/Html";
 import JavaScript from "./components/guides/JavaScript";
 import Next from "./components/guides/Next";
 import ReactPage from "./components/guides/React";
+import GuidStart from "./components/guides/GuidStart";
 
 const App = () => {
   return (
     <AuthProvider>
-      {" "}
       {/* ✅ Wrap the entire app in AuthProvider */}
-      <div
-        style={{ position: "relative", overflow: "hidden", height: "100vh" }}
-      >
+      <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
         <Galaxy />
         <NavBar />
         <div className="page">
@@ -33,7 +31,7 @@ const App = () => {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/" element={<Home />} />
             <Route path="/guides/*" element={<Guides />}>
-              <Route path="" element={<h1>Guides</h1>} />
+              <Route path="" element={<GuidStart/>} />
               <Route path="react" element={<ReactPage />} />
               <Route path="next" element={<Next />} />
               <Route path="html" element={<Html />} />

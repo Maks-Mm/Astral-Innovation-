@@ -2,9 +2,21 @@ import React from 'react'
 
 function Next() {
     return (
-        <div className='text-white'>
-            Next
-        </div>
+        <div className='sub-page'>
+
+      <div className='sub-page-card  text-white'>
+        JavaScript
+      </div>
+      <div className='sub-page-card  text-white'>
+        JavaScript
+      </div>
+      <div className='sub-page-card  text-white'>
+        JavaScript
+      </div>
+      <div className='sub-page-card  text-white'>
+        JavaScript
+      </div>
+    </div>
     )
 }
 
