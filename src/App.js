@@ -11,7 +11,11 @@ import Footer from "./components/footer/Footer";
 import Guides from "./components/guides/Guides";
 import Register from "./components/auth/register";
 import Login from "./components/auth/login";
-import { AuthProvider } from "./contexts/authContext"; 
+import { AuthProvider } from "./contexts/authContext";
+import Html from "./components/guides/Html";
+import JavaScript from "./components/guides/JavaScript";
+import Next from "./components/guides/Next";
+import ReactPage from "./components/guides/React";
 
 const App = () => {
   return (
@@ -30,10 +34,10 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/guides/*" element={<Guides />}>
               <Route path="" element={<h1>Guides</h1>} />
-              <Route path="react" element={<h1>React</h1>} />
-              <Route path="next" element={<h1>Next</h1>} />
-              <Route path="html" element={<h1>HTML</h1>} />
-              <Route path="javaScript" element={<h1>JavaScript</h1>} />
+              <Route path="react" element={<ReactPage />} />
+              <Route path="next" element={<Next />} />
+              <Route path="html" element={<Html />} />
+              <Route path="javaScript" element={<JavaScript />} />
             </Route>
             <Route path="/technologies" element={<Technologies />} />
             <Route path="/login" element={<Login />} />
