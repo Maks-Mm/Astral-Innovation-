@@ -8,7 +8,7 @@ export default function GuidStart() {
         info that helps at starting
 
       </div>
-
+<img src="https://cdn-icons-png.flaticon.com/512/8167/8167751.png" alt="img" className="sub-page-img" />
     </div>
 
   )

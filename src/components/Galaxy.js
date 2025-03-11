@@ -41,7 +41,8 @@ const Galaxy = () => {
         float angle = atan(modelPosition.x, modelPosition.z);
         float distanceToCenter = length(modelPosition.xz) + uHoleSize;
         float uTimeOffset = uTime + (uHoleSize * 30.0);
-        float angleOffset = (1.0 / distanceToCenter) * uTimeOffset * 0.2;
+        float angleOffset = (1.0 / distanceToCenter) * uTimeOffset * 0.05;
+
         angle += angleOffset;
         
         modelPosition.x = cos(angle) * distanceToCenter;
