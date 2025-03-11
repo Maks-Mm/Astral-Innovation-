@@ -5,8 +5,7 @@ const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
-    if (!query.trim()) return; // Prevent empty searches
-    onSearch(query);
+    onSearch(query); // Trigger search on the parent component
   };
 
   return (
@@ -17,6 +16,7 @@ const Search = ({ onSearch }) => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="search-input"
+        onKeyDown={(e) => e.key === 'Enter' ? handleSearch() : null} // Allow pressing Enter to trigger search
       />
       <button onClick={handleSearch} className="search-button">
         Search

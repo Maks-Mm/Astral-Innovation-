@@ -21,12 +21,7 @@ body {
     margin-bottom: 20px;
 }
 
-.home-text {
-    line-height: 1.6;
-    color: #fafafa; /* Text color for better readability */
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
+
 
 .technologies-container {
     display: flex;
@@ -73,4 +68,28 @@ body {
 .page {
     height: 96vh;
     overflow: auto;
+}
+.search-result-item {
+    background: rgba(255, 255, 255, 0.2); /* Use the same background for consistency */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Center alignment */
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.reset-button:hover {
+    background-color: #005999; /* Darken on hover */
 }

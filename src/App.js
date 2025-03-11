@@ -17,6 +17,7 @@ import JavaScript from "./components/guides/JavaScript";
 import Next from "./components/guides/Next";
 import ReactPage from "./components/guides/React";
 import GuidStart from "./components/guides/GuidStart";
+//import Search from "./components/panel/Search";
 
 const App = () => {
   return (
@@ -31,7 +32,7 @@ const App = () => {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/" element={<Home />} />
             <Route path="/guides/*" element={<Guides />}>
-              <Route path="" element={<GuidStart/>} />
+              <Route path="" element={<GuidStart />} />
               <Route path="react" element={<ReactPage />} />
               <Route path="next" element={<Next />} />
               <Route path="html" element={<Html />} />
