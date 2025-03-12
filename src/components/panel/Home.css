@@ -93,3 +93,10 @@ body {
 .reset-button:hover {
     background-color: #005999; /* Darken on hover */
 }
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align search results */
+    gap: 20px; /* Space between search result cards */
+    padding: 20px;
+}
