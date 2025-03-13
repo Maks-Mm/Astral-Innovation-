@@ -5,6 +5,7 @@ import './Chatbot.css'; // Import the updated CSS file
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
+    const [isChatOpen, setIsChatOpen] = useState(false); // State to control chatbot visibility
 
     const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
     console.log("API Key:", API_KEY); // This should log your API key
@@ -39,28 +40,44 @@ const Chatbot = () => {
         }
     };
 
+    const toggleChat = () => {
+        setIsChatOpen(!isChatOpen); // Toggle chatbot visibility
+    };
+
     return (
-        <div className="chatbot-container">
-            <h2 className="chatbot-title">Chatbot</h2>
-            <div className="chatbot-messages">
-                {messages.map((msg, index) => (
-                    <div key={index} className={`chatbot-message ${msg.role}`}>
-                        <p>
-                            <strong>{msg.role === "user" ? "You" : "ChatGPT"}:</strong> {msg.content}
-                        </p>
+        <div className="chatbot-wrapper">
+            {!isChatOpen && (
+                <div className="suggestion-box" onClick={toggleChat}>
+                    💬 Click here to chat with our AI assistant!
+                </div>
+            )}
+            {isChatOpen && (
+                <div className="chatbot-container">
+                    <div className="chatbot-header">
+                        <h2 className="chatbot-title">Chatbot</h2>
+                        <button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
                     </div>
-                ))}
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Type a message..."
-                    className="chatbot-input"
-                />
-                <button onClick={sendMessage} className="chatbot-button">Send</button>
-            </div>
+                    <div className="chatbot-messages">
+                        {messages.map((msg, index) => (
+                            <div key={index} className={`chatbot-message ${msg.role}`}>
+                                <p>
+                                    <strong>{msg.role === "user" ? "You" : "ChatGPT"}:</strong> {msg.content}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <input
+                            type="text"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            placeholder="Type a message..."
+                            className="chatbot-input"
+                        />
+                        <button onClick={sendMessage} className="chatbot-button">Send</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

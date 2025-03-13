@@ -6,12 +6,28 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Chatbot Wrapper */
+.chatbot-wrapper {
+    position: relative; /* Position for absolute child elements */
+}
+
+/* Suggestion Box Styles */
+.suggestion-box {
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    cursor: pointer; /* Pointer cursor for clickable element */
+    margin: 20px auto; /* Center the suggestion box */
+    max-width: 300px; /* Max width for the suggestion box */
+}
+
 /* Chatbot Container */
 .chatbot-container {
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2); /* Transparent background for glass effect */
     border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for glass effect */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -19,11 +35,28 @@ body {
     padding: 20px;
 }
 
+/* Chatbot Header Styles */
+.chatbot-header {
+    display: flex; /* Use flexbox for header layout */
+    justify-content: space-between; /* Space between title and close button */
+    align-items: center; /* Center align items vertically */
+}
+
 /* Title Styles */
 .chatbot-title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333; /* Dark color for the title */
+    color: white; /* Dark color for the title */
+}
+
+/* Close Button Styles */
+.close-button {
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    font-size: 24px; /* Larger font size */
+    color: white; /* Color for the close button */
+    cursor: pointer; /* Pointer cursor for clickable element */
+    margin-top: -21px;
 }
 
 /* Message Container Styles */
@@ -80,5 +113,9 @@ body {
 
     .chatbot-input {
         width: calc(100% - 70px); /* Adjust width for smaller screens */
+    }
+
+    .suggestion-box {
+        max-width: 80%; /* Responsive max width for suggestion box */
     }
 }
