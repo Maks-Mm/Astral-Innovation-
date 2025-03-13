@@ -17,12 +17,11 @@ import JavaScript from "./components/guides/JavaScript";
 import Next from "./components/guides/Next";
 import ReactPage from "./components/guides/React";
 import GuidStart from "./components/guides/GuidStart";
-//import Search from "./components/panel/Search";
+import Chatbot from "./Chatbot/Chatbot";
 
 const App = () => {
   return (
     <AuthProvider>
-      {/* ✅ Wrap the entire app in AuthProvider */}
       <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
         <Galaxy />
         <NavBar />
@@ -45,8 +44,24 @@ const App = () => {
         </div>
         <Footer />
         <BackgroundMusic />
+
+        {/* ✅ Add Chatbot in the bottom-right corner */}
+        <div 
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            right: "20px",
+            zIndex: 10,
+            background: "rgba(0, 0, 0, 0.8)",
+            borderRadius: "10px",
+            padding: "10px",
+          }}
+        >
+          <Chatbot />
+        </div>
       </div>
     </AuthProvider>
   );
 };
+
 export default App;
