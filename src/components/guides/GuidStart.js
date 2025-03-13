@@ -4,18 +4,13 @@ import './GuidStart.css'; // Import the CSS file
 export default function GuidStart() {
   // Array containing image URLs
   const imageSources = [
-    "JavaScript.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    "https://cdn-icons-png.flaticon.com/512/8167/8167751.png",
-    
-    
+"https://static-00.iconduck.com/assets.00/logo-js-icon-2048x2048-ptuzd8a3.png",
+    "icons8-nuxt-js-48.png",
+    "icons8-express-js-64.png",
+    "/icons8-adonis-js-48.png",
+    "icons8-nodejs-48.png",
+
+
   ];
 
   return (
