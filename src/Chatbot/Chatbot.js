@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './Chatbot.css'; // Import the updated CSS file
+import { IconButton } from "@mui/material";
+import Fingerprint from "@mui/icons-material/Fingerprint";
+
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
@@ -44,6 +47,11 @@ const Chatbot = () => {
         setIsChatOpen(!isChatOpen); // Toggle chatbot visibility
     };
 
+    const handleFingerprintClick = () => {
+        // Implement fingerprint functionality or any other action here
+        console.log("Fingerprint icon clicked");
+    };
+
     return (
         <div className="chatbot-wrapper">
             {!isChatOpen && (
@@ -52,10 +60,14 @@ const Chatbot = () => {
                 </div>
             )}
             {isChatOpen && (
+                        //<button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
                 <div className="chatbot-container">
                     <div className="chatbot-header">
                         <h2 className="chatbot-title">Chatbot</h2>
-                        <button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
+                        <IconButton aria-label="fingerprint" color="secondary" className="close-button" onClick={toggleChat}>
+                            <Fingerprint />
+
+                        </IconButton>
                     </div>
                     <div className="chatbot-messages">
                         {messages.map((msg, index) => (
@@ -74,6 +86,7 @@ const Chatbot = () => {
                             placeholder="Type a message..."
                             className="chatbot-input"
                         />
+
                         <button onClick={sendMessage} className="chatbot-button">Send</button>
                     </div>
                 </div>

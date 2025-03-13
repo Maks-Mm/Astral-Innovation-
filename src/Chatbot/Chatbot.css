@@ -95,7 +95,7 @@ body {
     padding: 10px 15px;
     margin-left: 10px;
     border: none;
-    background-color: #007bff; /* Primary button color */
+    background-color: gray; /* Primary button color */
     color: white;
     border-radius: 5px;
     cursor: pointer;
