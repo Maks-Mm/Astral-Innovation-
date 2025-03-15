@@ -92,13 +92,14 @@ body {
 
 /* Button Styles */
 .chatbot-button {
-    padding: 10px 15px;
+    padding: 8px 25px;
     margin-left: 10px;
     border: none;
-    background-color: gray; /* Primary button color */
-    color: white;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
 .chatbot-button:hover {

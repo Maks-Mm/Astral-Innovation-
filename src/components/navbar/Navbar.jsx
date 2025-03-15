@@ -2,31 +2,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css"; // Import the CSS Module
-
+import { IoHomeOutline } from "react-icons/io5";
+import { AiOutlineComment } from "react-icons/ai";
+import { CgLogIn } from "react-icons/cg";
+import { TfiInfoAlt } from "react-icons/tfi";
+import { FaReacteurope } from "react-icons/fa";
+import { LuLightbulb } from "react-icons/lu";
+import { CgProfile } from "react-icons/cg";
 const NavBar = () => {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.navItem}>
-        Home
+        <IoHomeOutline />
       </Link>
       <Link to="/AboutUs" className={styles.navItem}>
-        About Us
+      <TfiInfoAlt />
       </Link>
       <Link to="/Contacts" className={styles.navItem}>
-        Contacts
+        <AiOutlineComment />
       </Link>
       <Link to="/Guides" className={styles.navItem}>
-        Guides
+        <FaReacteurope />
       </Link>
       <Link to="/Technologies" className={styles.navItem}>
-        Technologies
+        <LuLightbulb/>
       </Link>
 
       <Link to="/login" className={styles.navItem}>
-        Login
+        <CgLogIn />
       </Link>
       <Link to="/register" className={styles.navItem}>
-        Register New Account
+        <CgProfile />
       </Link>
     </nav>
   );

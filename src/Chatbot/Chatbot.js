@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import './Chatbot.css'; // Import the updated CSS file
 import { IconButton } from "@mui/material";
-import Fingerprint from "@mui/icons-material/Fingerprint";
-
+import { RiSendPlane2Fill } from "react-icons/ri";
+import { GrFormClose } from "react-icons/gr";
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
@@ -60,14 +60,13 @@ const Chatbot = () => {
                 </div>
             )}
             {isChatOpen && (
-                        //<button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
+                //<button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
                 <div className="chatbot-container">
                     <div className="chatbot-header">
                         <h2 className="chatbot-title">Chatbot</h2>
-                        <IconButton aria-label="fingerprint" color="secondary" className="close-button" onClick={toggleChat}>
-                            <Fingerprint />
-
-                        </IconButton>
+                        <div className="close-button" onClick={toggleChat}>
+                            <GrFormClose />
+                        </div>
                     </div>
                     <div className="chatbot-messages">
                         {messages.map((msg, index) => (
@@ -87,7 +86,7 @@ const Chatbot = () => {
                             className="chatbot-input"
                         />
 
-                        <button onClick={sendMessage} className="chatbot-button">Send</button>
+                        <button onClick={sendMessage} className="chatbot-button"><RiSendPlane2Fill /></button>
                     </div>
                 </div>
             )}
