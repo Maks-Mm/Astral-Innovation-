@@ -1,7 +1,7 @@
+"use client"
 import React, { useState } from "react";
 import axios from "axios";
 import './Chatbot.css'; // Import the updated CSS file
-import { IconButton } from "@mui/material";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { GrFormClose } from "react-icons/gr";
 

@@ -1,0 +1,26 @@
+.carousel-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.carousel-image {
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-text {
+    font-size: 16px;
+}

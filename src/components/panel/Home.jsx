@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Search from "../search/Search"; // Ensure you have the correct path to your Search component
+import MyCarousel from "../../carousel/MyCarousel";
 
 function Home() {
   const [results, setResults] = useState([]);
@@ -43,7 +44,6 @@ function Home() {
     <div className="home-container">
       <h1 className="home-title">Welcome to My Home Page</h1>
       <Search onSearch={handleSearch} />
-
       {isSearching ? ( // Only show search results if searching
         <div className="search-results">
           {results.length > 0 ? (
@@ -61,8 +61,7 @@ function Home() {
       ) : (
         <p>Please enter a technology to search.</p> // Prompt for the user when no search has been made
       )}
-
-
+      <MyCarousel /> {/* Place the carousel here */}
     </div>
   );
 }
