@@ -9,17 +9,19 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [isChatOpen, setIsChatOpen] = useState(false); // State to control chatbot visibility
+    const [errorMessage, setErrorMessage] = useState(""); // State to hold error messages
 
+    // Hardcoded API key for testing purposes
     const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-    console.log("API Key:", API_KEY); // This should log your API key
 
-    const sendMessage = async () => {
+    const sendMessage = async (retries = 3) => {
         if (!input.trim()) return;
 
         const userMessage = { role: "user", content: input };
         const newMessages = [...messages, userMessage];
         setMessages(newMessages);
         setInput("");
+        setErrorMessage(""); // Clear any previous error message
 
         try {
             const response = await axios.post(
@@ -39,17 +41,22 @@ const Chatbot = () => {
             const botMessage = response.data.choices[0].message;
             setMessages([...newMessages, botMessage]);
         } catch (error) {
-            console.error("Error fetching response:", error);
+            if (error.response) {
+                if (error.response.status === 429) {
+                    // Set error message when quota is exceeded
+                    setErrorMessage("You have exceeded your quota for today. Please try again later.");
+                } else {
+                    setErrorMessage("An error occurred. Please try again later.");
+                }
+                console.error("Error fetching response:", error.response.data);
+            } else {
+                console.error("Error", error.message);
+            }
         }
     };
 
     const toggleChat = () => {
         setIsChatOpen(!isChatOpen); // Toggle chatbot visibility
-    };
-
-    const handleFingerprintClick = () => {
-        // Implement fingerprint functionality or any other action here
-        console.log("Fingerprint icon clicked");
     };
 
     return (
@@ -60,7 +67,6 @@ const Chatbot = () => {
                 </div>
             )}
             {isChatOpen && (
-                //<button className="close-button" onClick={toggleChat}>×</button> {/* Close button */}
                 <div className="chatbot-container">
                     <div className="chatbot-header">
                         <h2 className="chatbot-title">Chatbot</h2>
@@ -77,6 +83,11 @@ const Chatbot = () => {
                             </div>
                         ))}
                     </div>
+                    {errorMessage && (
+                        <div style={{ color: "red", margin: "10px 0" }}>
+                            {errorMessage}
+                        </div>
+                    )}
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <input
                             type="text"
@@ -85,7 +96,6 @@ const Chatbot = () => {
                             placeholder="Type a message..."
                             className="chatbot-input"
                         />
-
                         <button onClick={sendMessage} className="chatbot-button"><RiSendPlane2Fill /></button>
                     </div>
                 </div>
