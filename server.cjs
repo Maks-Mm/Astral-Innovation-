@@ -1,10 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 
-const PORT = 3001;
+const PORT = 3001; // Port for your backend server
 const app = express();
 
 app.use(cors());
+app.use(express.json()); // Middleware to parse JSON bodies
 
 const technologies = [
   {
@@ -609,6 +610,7 @@ const technologies = [
   },
 ];
 
+
 // Route to handle search
 app.get("/search", (req, res) => {
   const query = req.query.q;
@@ -629,12 +631,13 @@ app.get("/technologies", (req, res) => {
   res.json(technologies);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
 // Error handling middleware (optional)
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
