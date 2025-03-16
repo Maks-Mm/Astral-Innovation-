@@ -4,7 +4,8 @@ https://codepen.io/aderaaij/pen/oNBWEWv : background
 https://www.youtube.com/watch?v=dQc8_t1x3JU : backgroundMusic
 
 
-
+new command to start backend: node server.cjs
+command to start Chatbot : node google-ai.js
 
 
 background animations : 
