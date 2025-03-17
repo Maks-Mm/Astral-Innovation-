@@ -1,11 +1,9 @@
-/* AboutUs.css */
+/* src/components/pages/AboutUs.css */
 .glass-effect {
-    padding: 24px; /* Padding for the glass effect */
-    border-radius: 12px; /* Rounded corners */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    color: white; /* Text color */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px); /* Blur effect */
-  }
-  
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  background: rgba(255, 255, 255, 0.1); /* White background with some transparency */
+  border-radius: 10px; /* Rounded corners */
+  padding: 16px; /* Inner padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
+}

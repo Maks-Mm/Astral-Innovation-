@@ -19,3 +19,40 @@ API Chatgpt : https://platform.openai.com/settings/organization/api-keys
 animations to css : https://michalsnik.github.io/aos/
 
 https://react-bootstrap.netlify.app/docs/components/carousel/
+
+the problem is probably at sendMessage in CHatbot or on  https://platform.openai.com/settings/organization/limits
+
+
+You Are Still Getting a 429 Error (Quota Exceeded)
+
+The error message "You exceeded your current quota" means that your OpenAI account has run out of free credits or has hit its usage limit.
+🔍 Steps to Check Your OpenAI Billing & Quota
+
+    Check Usage & Quota
+        Go to OpenAI Usage Page
+        See if you have remaining free credits or if you've exceeded your limit.
+
+    Check Billing Status
+        Visit OpenAI Billing Page
+        Ensure you have an active payment method and enough balance to continue making API calls.
+
+    Upgrade to a Paid Plan
+        If you're using the free trial, it has a limit. You may need to add a payment method to continue using the API.
+        Go to Billing Settings and check if you need to purchase additional credits.
+
+🚀 How to Fix This in Your Chatbot
+
+If you still want to test without upgrading:
+
+    Limit API Calls – Add a delay before retrying to prevent hitting rate limits.
+    Use a Backend Proxy – Secure your API key and avoid exposing it in frontend code.
+    Use a Different API Key – If you have access to another OpenAI account, try using a different key.
+
+💡 Next Steps
+
+✅ Check OpenAI Usage & Billing
+✅ Upgrade to a Paid Plan (if necessary)
+✅ Reduce API Calls / Implement Retry Strategy
+✅ Secure API Key in Backend
+
+Let me know if you need further help! 🚀

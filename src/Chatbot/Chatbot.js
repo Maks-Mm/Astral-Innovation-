@@ -13,47 +13,62 @@ const Chatbot = () => {
 
     // Hardcoded API key for testing purposes
     const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+//const API_KEY = process.env.REACT_APP_OPENAI_API_KEY || "";
+   console.log("API Key:", process.env.REACT_APP_OPENAI_API_KEY);
 
-    const sendMessage = async (retries = 3) => {
-        if (!input.trim()) return;
+    console.log("API Key:", API_KEY);
 
-        const userMessage = { role: "user", content: input };
-        const newMessages = [...messages, userMessage];
-        setMessages(newMessages);
-        setInput("");
-        setErrorMessage(""); // Clear any previous error message
 
-        try {
-            const response = await axios.post(
-                "https://api.openai.com/v1/chat/completions",
-                {
-                    model: "gpt-3.5-turbo", // or "gpt-4"
-                    messages: newMessages,
+//is the issue with the API key?
+const sendMessage = async (retries = 3) => {
+    if (!input.trim()) return;
+
+    const userMessage = { role: "user", content: input };
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    setInput("");
+    setErrorMessage("");
+
+    try {
+        const response = await axios.post(
+            "https://api.openai.com/v1/chat/completions",
+            {
+                model: "gpt-3.5-turbo",
+                messages: newMessages,
+            },
+            {
+                headers: {
+                    "Authorization": `Bearer ${API_KEY}`,
+                    "Content-Type": "application/json",
                 },
-                {
-                    headers: {
-                        "Authorization": `Bearer ${API_KEY}`,
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
-
-            const botMessage = response.data.choices[0].message;
-            setMessages([...newMessages, botMessage]);
-        } catch (error) {
-            if (error.response) {
-                if (error.response.status === 429) {
-                    // Set error message when quota is exceeded
-                    setErrorMessage("You have exceeded your quota for today. Please try again later.");
-                } else {
-                    setErrorMessage("An error occurred. Please try again later.");
-                }
-                console.error("Error fetching response:", error.response.data);
-            } else {
-                console.error("Error", error.message);
             }
+        );
+
+        const botMessage = response.data.choices[0].message;
+        setMessages([...newMessages, botMessage]);
+    } catch (error) {
+        if (error.response) {
+            if (error.response.status === 429) {
+                if (retries > 0) {
+                    const waitTime = 5000; // wait 5 seconds before retrying
+                    console.log(`Rate limit exceeded. Retrying in ${waitTime / 1000} seconds...`);
+                    await new Promise(resolve => setTimeout(resolve, waitTime)); // Wait for 5 seconds
+                    return sendMessage(retries - 1); // Retry the request
+                } else {
+                    setErrorMessage("Rate limit exceeded. Please try again later.");
+                }
+            } else {
+                setErrorMessage("An error occurred. Please try again later.");
+            }
+            console.error("Error fetching response:", error.response.data);
+        } else {
+            console.error("Error", error.message);
         }
-    };
+    }
+};
+
+
+
 
     const toggleChat = () => {
         setIsChatOpen(!isChatOpen); // Toggle chatbot visibility
