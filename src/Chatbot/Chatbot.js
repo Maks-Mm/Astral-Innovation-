@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
-import "./Chatbot.css"; // Import the updated CSS file
+import "aos/dist/aos.css";
+import "./Chatbot.css";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { GrFormClose } from "react-icons/gr";
 
@@ -73,12 +73,12 @@ const Chatbot = () => {
     return (
         <div className="chatbot-background">
             {!isChatOpen && (
-                <div className="suggestion-box" onClick={toggleChat} data-aos="fade-up">
+                <div className="suggestion-box" onClick={toggleChat} data-aos="zoom-out">
                     💬 Click here to chat with our AI assistant!
                 </div>
             )}
             {isChatOpen && (
-                <div className="chatbot-container-wrapper" data-aos="fade-up">
+                <div className="chatbot-container-wrapper" data-aos="zoom-out">
                     <div className="chatbot-container">
                         <div className="chatbot-header">
                             <h2 className="chatbot-title">Chatbot</h2>

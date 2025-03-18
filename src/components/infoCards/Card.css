@@ -48,3 +48,17 @@
 .social-media p {
   margin: 0; /* Remove margin */
 }
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adds space between cards */
+  overflow-y: auto; /* Allows scrolling */
+  max-height: 80vh; /* Prevents cutting off */
+}

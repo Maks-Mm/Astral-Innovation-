@@ -3,6 +3,9 @@ import { Navigate, Link } from 'react-router-dom';
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth';
 import { useAuth } from '../../../contexts/authContext';
 import Galaxy from '../../Galaxy';
+import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Login = () => {
     const { userLoggedIn } = useAuth();
@@ -11,6 +14,10 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [isSigningIn, setIsSigningIn] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -35,7 +42,7 @@ const Login = () => {
     };
 
     return (
-        <div className="relative overflow-hidden h-screen w-full flex items-center justify-center">
+        <div className="relative overflow-hidden h-screen w-full flex items-center justify-center" data-aos="zoom-out">
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
             <Galaxy />
             <main className="relative z-10 flex items-center justify-center w-full h-full">

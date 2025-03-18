@@ -3,6 +3,10 @@ import { Navigate, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../contexts/authContext';
 import { doCreateUserWithEmailAndPassword } from '../../../firebase/auth';
 import './index.css';
+import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -12,6 +16,11 @@ const Register = () => {
     const [isRegistering, setIsRegistering] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const { userLoggedIn } = useAuth();
+
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -25,7 +34,7 @@ const Register = () => {
     };
 
     return (
-        <>
+        <div data-aos="zoom-out">
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
             <main className="auth-container">
                 <div className="auth-card">
@@ -39,7 +48,7 @@ const Register = () => {
                                 type="email"
                                 autoComplete='email'
                                 required
-                                value={email} 
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="auth-input"
                             />
@@ -50,7 +59,7 @@ const Register = () => {
                                 type="password"
                                 autoComplete='new-password'
                                 required
-                                value={password} 
+                                value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="auth-input"
                                 disabled={isRegistering}
@@ -62,7 +71,7 @@ const Register = () => {
                                 type="password"
                                 autoComplete='off'
                                 required
-                                value={confirmPassword} 
+                                value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                 className="auth-input"
                                 disabled={isRegistering}
@@ -78,7 +87,7 @@ const Register = () => {
                     </form>
                 </div>
             </main>
-        </>
+        </div>
     );
 };
 
