@@ -18,7 +18,7 @@ import Next from "./components/guides/Next";
 import ReactPage from "./components/guides/React";
 import GuidStart from "./components/guides/GuidStart";
 import Chatbot from "./chatbot/Chatbot";
-import MyCarousel from "./carousel/MyCarousel";
+//port MyCarousel from "./carousel/MyCarousel";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

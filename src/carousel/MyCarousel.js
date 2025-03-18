@@ -3,17 +3,22 @@ import Carousel from 'react-bootstrap/Carousel';
 import map from '../assets/images/map.jpg'; // Import the image
 import map1 from '../assets/images/background.webp'; // Import the image
 import map2 from '../assets/images/download.gif'; // Import the image
-
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import './MyCarousel.css'; // Import the CSS file
+import { useEffect } from 'react';
 
 function MyCarousel() {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 }); 
+    }, []);
+
     return (
         //  <img className="d-block w-100 carousel-image" src={"map"} alt="Galaxy slide" />
         <div className="carousel-container">
             <Carousel>
-                <Carousel.Item>
+                <Carousel.Item  data-aos="fade-up">
                     <img src={map} alt="nichts"  className="d-block w-100 carousel-image"  />
 
                     <Carousel.Caption>
