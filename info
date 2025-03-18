@@ -10,6 +10,8 @@ command to start Chatbot : node google-ai.js http://localhost:3002
 
 background animations : 
 
+library : https://michalsnik.github.io/aos/
+
 https://v.ftcdn.net/07/87/47/61/700_F_787476163_9jVIZ5dhFDGucs8XQSdyONJF2MevdynK_ST.mp4
 
 address to react buttons : https://mui.com/material-ui/react-button/?srsltid=AfmBOooYGWUBmWxk3AwlMrkFIMesGhu7JOh1ijd6vlf0egJNZHJIdqvL
