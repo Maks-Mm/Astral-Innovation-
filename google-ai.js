@@ -3,21 +3,21 @@ import express from 'express';
 import cors from 'cors';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-dotenv.config(); // Load environment variables
+dotenv.config(); 
 
 const app = express();
-const PORT = process.env.PORT || 3002; // Change to 3002
+const PORT = process.env.PORT || 3002; 
 
 
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json()); 
 
-// Initialize Google Generative AI
+
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
-// Chatbot endpoint
+
 app.post('/api/chat', async (req, res) => {
-    const { message } = req.body; // Expecting a message in the request body
+    const { message } = req.body; 
 
     try {
         const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
@@ -36,14 +36,13 @@ app.post('/api/chat', async (req, res) => {
         });
 
         const responseText = await result.response.text();
-        res.json({ response: responseText }); // Send the response back to the client
+        res.json({ response: responseText });
     } catch (error) {
         console.error("Error fetching from AI:", error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

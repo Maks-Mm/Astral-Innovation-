@@ -8,6 +8,8 @@ new command to start backend: node server.cjs http://localhost:3001
 command to start Chatbot : node google-ai.js http://localhost:3002
 
 
+google CHatBot keys : https://aistudio.google.com/apikey
+
 background animations : 
 
 library : https://michalsnik.github.io/aos/
@@ -21,6 +23,8 @@ API Chatgpt : https://platform.openai.com/settings/organization/api-keys
 animations to css : https://michalsnik.github.io/aos/
 
 https://react-bootstrap.netlify.app/docs/components/carousel/
+
+npm install react-draggable library to drag and drop at scroll effect
 
 the problem is probably at sendMessage in CHatbot or on  https://platform.openai.com/settings/organization/limits
 
