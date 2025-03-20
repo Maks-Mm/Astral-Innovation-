@@ -1,42 +1,49 @@
 .search-container {
-    display: flex;
-    align-items: center;
-    color: black;
-    margin: 20px; /* Adjust margin as needed */
-  }
-  
-  .search-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex: 1; /* Allows the input to grow and fill space */
-    margin-right: 10px; /* Space between input and button */
-  }
-  
-  .search-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #007bff; /* Primary button color */
-    color: white; /* Text color */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .search-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
+  display: flex;
+  align-items: center;
+  color: black;
+  margin: 20px; /* Adjust margin as needed */
+  position: relative; /* Added to position stars correctly */
+}
 
-  .new-effects{
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;   
-  }
-  
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1; /* Allows the input to grow and fill space */
+  margin-right: 10px; /* Space between input and button */
+}
+
+.search-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  position: relative; /* Added for positioning */
+  overflow: hidden; /* Ensures stars don't overflow */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Diamond Shape Stars */
+.stars {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  box-shadow: 0 0 10px white;
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
+}
+
+.stars.large {
+  width: 10px;
+  height: 10px;
+}
