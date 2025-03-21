@@ -636,7 +636,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
 });
-
+//where do we have the other port in Terminal?
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running HI new run onhttp://localhost:${PORT}`);
