@@ -13,8 +13,6 @@ const Chatbot = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
@@ -29,36 +27,20 @@ const Chatbot = () => {
         setErrorMessage("");
 
         try {
-            const response = await axios.post(
-                "https://api.openai.com/v1/chat/completions",
-                {
-                    model: "gpt-3.5-turbo",
-                    messages: newMessages,
-                },
-                {
-                    headers: {
-                        "Authorization": `Bearer ${API_KEY}`,
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
+            // Call the backend chatbot endpoint
+            const response = await axios.post("http://localhost:3001/chatbot", {
+                message: input, // Send the user message to the backend
+            });
 
-            const botMessage = response.data.choices[0].message;
+            // Extracting the response from the backend
+            const botMessage = {
+                role: "assistant",
+                content: response.data.response, // Get the AI's response from the backend
+            };
             setMessages([...newMessages, botMessage]);
         } catch (error) {
             if (error.response) {
-                if (error.response.status === 429) {
-                    if (retries > 0) {
-                        const waitTime = 5000;
-                        console.log(`Rate limit exceeded. Retrying in ${waitTime / 1000} seconds...`);
-                        await new Promise(resolve => setTimeout(resolve, waitTime));
-                        return sendMessage(retries - 1);
-                    } else {
-                        setErrorMessage("Rate limit exceeded. Please try again later.");
-                    }
-                } else {
-                    setErrorMessage("An error occurred. Please try again later.");
-                }
+                setErrorMessage("An error occurred. Please try again later.");
                 console.error("Error fetching response:", error.response.data);
             } else {
                 console.error("Error", error.message);
@@ -90,7 +72,7 @@ const Chatbot = () => {
                             {messages.map((msg, index) => (
                                 <div key={index} className={`chatbot-message ${msg.role}`}>
                                     <p>
-                                        <strong>{msg.role === "user" ? "You" : "ChatGPT"}:</strong> {msg.content}
+                                        <strong>{msg.role === "user" ? "You" : "AI"}:</strong> {msg.content}
                                     </p>
                                 </div>
                             ))}
