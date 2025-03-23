@@ -45,8 +45,8 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
-        </div>
         <Footer />
+        </div>
         <BackgroundMusic />
 
         {/* ✅ Add Chatbot in the bottom-right corner */}
