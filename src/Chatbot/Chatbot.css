@@ -88,6 +88,7 @@ body {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.2); /* Transparent input background for glass effect */
     backdrop-filter: blur(10px); /* Blur effect */
+    color:white;
 }
 
 /* Button Styles */
@@ -118,6 +119,7 @@ body {
 
     .suggestion-box {
         max-width: 80%; /* Responsive max width for suggestion box */
+        color:white;
     }
     .chatbot-background {
         position: fixed;

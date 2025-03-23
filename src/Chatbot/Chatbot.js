@@ -71,7 +71,7 @@ const Chatbot = () => {
                         <div className="chatbot-messages">
                             {messages.map((msg, index) => (
                                 <div key={index} className={`chatbot-message ${msg.role}`}>
-                                    <p>
+                                    <p className="text-white">
                                         <strong>{msg.role === "user" ? "You" : "AI"}:</strong> {msg.content}
                                     </p>
                                 </div>
