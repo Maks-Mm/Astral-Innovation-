@@ -19,7 +19,7 @@ function MyCarousel() {
         <div className="carousel-container">
             <Carousel>
                 <Carousel.Item data-aos="fade-up">
-                    <img src="https://media4.giphy.com/media/26wdcnG8UP85vOtGw/giphy.webp?cid=ecf05e47f8ak1qn5jptbj99ao5ht1ekpz5vnxn5zddmfuung&ep=v1_gifs_related&rid=giphy.webp&ct=g" alt="nichts" className="d-block w-100 carousel-image" />
+                    <img src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" />
 
                     <Carousel.Caption>
                         <h3 className="carousel-title">Galaxy Slide</h3>
@@ -27,14 +27,14 @@ function MyCarousel() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100 carousel-image" src="https://media2.giphy.com/media/xUA7aQWDNhElgR3NUQ/giphy.webp?cid=ecf05e47f8ak1qn5jptbj99ao5ht1ekpz5vnxn5zddmfuung&ep=v1_gifs_related&rid=giphy.webp&ct=g" alt="Second slide" />
+                    <img className="d-block w-100 carousel-image" src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" alt="Second slide" />
                     <Carousel.Caption>
                         <h3 className="carousel-title">Second Slide Label</h3>
                         <p className="carousel-text">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100 carousel-image" src="https://media0.giphy.com/media/3oxQNlhHHB4Vp8aZ7a/giphy.webp?cid=ecf05e47f8ak1qn5jptbj99ao5ht1ekpz5vnxn5zddmfuung&ep=v1_gifs_related&rid=giphy.webp&ct=g" alt="Third slide" />
+                    <img className="d-block w-100 carousel-image" src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" alt="Third slide" />
                     <Carousel.Caption>
                         <h3 className="carousel-title">Third Slide Label</h3>
                     </Carousel.Caption>
