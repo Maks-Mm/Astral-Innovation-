@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,8 +45,8 @@ const Chatbot = () => {
         <div className="chatbot-wrapper">
             {!isChatOpen && (
                 <div className="suggestion-box" onClick={() => setIsChatOpen(true)} data-aos="fade-in">
+                    <img src="chat.svg" alt="Chatbot Logo" className="chatbot-image" />
                     💬 Click to Chat
-<img src="chat.svg" alt="Chatbot" className="chatbot-image" />  
                 </div>
             )}
 
