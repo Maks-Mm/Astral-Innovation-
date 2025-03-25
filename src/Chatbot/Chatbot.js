@@ -6,7 +6,6 @@ import "aos/dist/aos.css";
 import "./Chatbot.css";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { GrFormClose } from "react-icons/gr";
-
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
@@ -45,7 +44,7 @@ const Chatbot = () => {
         <div className="chatbot-wrapper">
             {!isChatOpen && (
                 <div className="suggestion-box" onClick={() => setIsChatOpen(true)} data-aos="fade-in">
-                    <img src="chat.svg" alt="Chatbot Logo" className="chatbot-image" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEW7fpt9iTfrQOdTYRUt37F6AiuhKhhjNleA&s" alt="Chatbot Logo" className="chatbot-image" />💩
                     💬 Click to Chat
                 </div>
             )}
