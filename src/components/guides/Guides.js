@@ -10,7 +10,6 @@ function Guides() {
         <Link to="/guides/next">NEXT</Link>
         <Link to="/guides/html">HTML</Link>
         <Link to="/guides/javaScript">JavaScript</Link>
-        
       </p>
       <Outlet />
     </div>
