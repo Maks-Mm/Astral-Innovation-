@@ -24,7 +24,13 @@ body {
     margin: 20px auto; /* Center the suggestion box */
     max-width: 300px; /* Max width for the suggestion box */
     backdrop-filter: blur(10px); /* Blur effect for glass effect */
+    border-radius: 50%;
+    
 }
+.chatbot-image{
+    border-radius: 50%;
+}
+
 
 /* Chatbot Container */
 .chatbot-container {

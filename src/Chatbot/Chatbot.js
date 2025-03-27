@@ -44,8 +44,8 @@ const Chatbot = () => {
         <div className="chatbot-wrapper">
             {!isChatOpen && (
                 <div className="suggestion-box" onClick={() => setIsChatOpen(true)} data-aos="fade-in">
-                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdodjFsdWZ5bnUwN21zdWd4eHp6YzZ0ODdrY291OGg1ZXVjNWZ2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S60CrN9iMxFlyp7uM8/giphy.gif" alt="Chatbot Logo" className="chatbot-image" />💩
-                    💬 Click to Chat
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdodjFsdWZ5bnUwN21zdWd4eHp6YzZ0ODdrY291OGg1ZXVjNWZ2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S60CrN9iMxFlyp7uM8/giphy.gif" alt="Chatbot Logo" className="chatbot-image" />
+
                 </div>
             )}
 
