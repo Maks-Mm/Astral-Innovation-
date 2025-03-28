@@ -145,3 +145,15 @@ body {
         color: white; /* Color for suggestion text */
     }
 }
+.addition{
+    background: rgba(0, 123, 255, 0.7); /* Slightly darker blue for user messages */
+    color: white;
+    text-align: center;
+    padding: 5px 10px;          
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor for clickable element */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */    
+}
