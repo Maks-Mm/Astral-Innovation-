@@ -114,3 +114,8 @@
   height: 40px;
   margin-right: 10px;
 }
+.technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

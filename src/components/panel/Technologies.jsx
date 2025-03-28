@@ -15,6 +15,7 @@ function Technologies() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
+        console.log("Fetched Technologies:", data); // Debugging
         setTechnologies(data);
       } catch (error) {
         setError(error.message);
@@ -22,9 +23,10 @@ function Technologies() {
         setLoading(false);
       }
     };
-
+  
     fetchTechnologies();
   }, []);
+  
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -33,9 +35,11 @@ function Technologies() {
     <div>
       <h1 className="text-4xl font-bold text-blue-500 mb-4">Technologies</h1>
       <div className="technologies-container">
-        {technologies.map((tech) => (
-          <Card key={tech.id} tech={tech} />
-        ))}
+      {technologies.map((tech) => {
+  console.log("Rendering tech:", tech); // Debugging
+  return <Card key={tech.id} tech={tech} />;
+})}
+
       </div>
     </div>
   );
