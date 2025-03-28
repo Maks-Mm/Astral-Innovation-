@@ -114,8 +114,16 @@
   height: 40px;
   margin-right: 10px;
 }
+/* Center the title */
+h1 {
+  text-align: center;
+}
+
+/* Center the card container */
 .technologies-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center; /* Centers cards horizontally */
+  gap: 20px; /* Adds spacing between cards */
+  padding: 20px;
 }

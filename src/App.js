@@ -26,7 +26,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
     <AuthProvider>
-      <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
+      <div style={{ position: "relative",  height: "100vh" }}>
         <Galaxy />
         <NavBar />
         <div className="page">

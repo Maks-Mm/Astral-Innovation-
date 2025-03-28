@@ -23,22 +23,22 @@ function Technologies() {
         setLoading(false);
       }
     };
-  
+
     fetchTechnologies();
   }, []);
-  
+
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h1 className="text-4xl font-bold text-blue-500 mb-4">Technologies</h1>
       <div className="technologies-container">
-      {technologies.map((tech) => {
-  console.log("Rendering tech:", tech); // Debugging
-  return <Card key={tech.id} tech={tech} />;
-})}
+        {technologies.map((tech) => {
+          console.log("Rendering tech:", tech); // Debugging
+          return <Card key={tech.id} tech={tech} />;
+        })}
 
       </div>
     </div>
