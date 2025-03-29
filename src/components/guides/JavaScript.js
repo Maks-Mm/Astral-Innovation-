@@ -22,12 +22,7 @@ function JavaScript() {
       <div className='sub-page-card  text-white'>
         JavaScript
       </div>
-      <div className='sub-page-card  text-white'>
-        JavaScript
-      </div>
-      <div className='sub-page-card  text-white'>
-        JavaScript
-      </div>
+
     </div>
   )
 }
