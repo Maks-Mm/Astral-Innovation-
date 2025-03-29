@@ -1,44 +1,70 @@
 /* GuidStart.css */
 body {
-    background-color: #1e1633;
-    color: #b8abab;
-    font-family: Montserrat, sans-serif;
-    font-weight: 400;
-    color: rgba(215, 213, 213, 0.922);
-  }
-  
-  .sub-page {
-    max-width: 1000px;
-    margin: auto;
-    padding-bottom: 100px;
-  }
-  
-  .sub-page-card {
-    --a: 8deg;
-    border-radius: 20px;
-    padding: 45px 60px;
-    background-color: rgba(28, 27, 27, 0.21);
-    transition: transform 0.5s ease;
-    transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
-    -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250% 250%;
-  }
-  
-  .sub-page-card:hover {
-    --i: -1;
-    -webkit-mask-position: 0 0;
-  }
-  
-  .sub-page-img {
-    width: 100px; /* Set the width of the image */
-    height: 100px; /* Set the height of the image */
-    border-radius: 50%; /* Make the image round */
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for both scale and background color */
-  }
-  
-  .sub-page-img:hover {
-    transform: scale(1.2); /* Scale effect on hover */
-    background-color: white; /* Background color on hover */
-  }
-  
+  background-color: #1e1633;
+  color: #b8abab;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: rgba(215, 213, 213, 0.922);
+}
+
+.sub-page {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.sub-page-card {
+  --a: 8deg;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: rgba(28, 27, 27, 0.21);
+  transition: transform 0.5s ease;
+  transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+  -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250% 250%;
+}
+
+.sub-page-card:hover {
+  --i: -1;
+  -webkit-mask-position: 0 0;
+}
+
+.sub-page-img {
+  width: 100px;
+  /* Set the width of the image */
+  height: 100px;
+  /* Set the height of the image */
+  border-radius: 50%;
+  /* Make the image round */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Transition for both scale and background color */
+}
+
+.sub-page-img:hover {
+  transform: scale(1.2);
+  /* Scale effect on hover */
+  background-color: white;
+  /* Background color on hover */
+}
+
+.screen {
+  background-image: url('https://img.freepik.com/free-vector/led-screen-light-background-texture-with-pixel_107791-20972.jpg?t=st=1743259051~exp=1743262651~hmac=74c6c021314e1ee3b2c61de961c0b3b1fc1f3c207537f21e3b535bf7886bc5ee&w=1380');
+  background-size: 100%;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Semi-transparent black */
+  background-blend-mode: overlay;
+  /* Blends the image with the background */
+  color: white;
+  opacity: 1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+}
+.substrate{
+  background-color: rgba(0,0,0,0.7);
+
+  width: 100%;
+  padding: 45px 60px;
+  height: 100%;
+}

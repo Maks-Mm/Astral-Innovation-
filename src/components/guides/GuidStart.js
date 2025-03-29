@@ -1,6 +1,7 @@
 import React from 'react';
 import './GuidStart.css'; // Import the CSS file
 
+
 export default function GuidStart() {
   // Array containing image URLs
   const imageSources = [
@@ -19,8 +20,11 @@ export default function GuidStart() {
 
   return (
     <div className='sub-page'>
-      <div className='sub-page-card text-white'>
+      <div className='sub-page-card text-white screen' >
+        <div className='substrate'>
+
         Welcome to the guides section! Here, you'll find not only detailed instructions on JavaScript, React, Node.js, and other technologies but also support from like-minded individuals. Our guides will help you understand the intricacies and inspire you to take on new projects. Join our community, share your experiences, and grow with us!
+        </div>
       </div>
       {/* Use map to render images from the array */}
       {imageSources.map((src, index) => (
