@@ -37,3 +37,9 @@ i plane create a logo with click and going to scraping example name to the Logo,
 
 lest lection : we was looking for keys of api to our project 
 https://stackoverflow.com/questions/68660047/im-using-the-giphy-api-and-i-was-wondering-how-you-could-get-a-gifs-image-url
+
+the resours is with keys implemented 
+
+now i must correct the locig whel i new run to page refresh i m looking to a rondom fis ,this is good but if i click the carousel to lift ot to right i see nathing ,the logis is to correct i will make refresh und see new fifs not only whit i makw reset but also while i will click the left or right on carosul,new gifs 
+
+issue at styling background white field: i have a background to project with js html react css aios pi,and the project has a carousel with api photos with verios sizes  and in the time i have a component for background this is a animation with galaxy and if the gif is with big sizes the background hat a white field down 
