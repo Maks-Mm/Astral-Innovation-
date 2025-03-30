@@ -1,44 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import map from '../assets/images/map.jpg'; // Import the image
-import map1 from '../assets/images/background.webp'; // Import the image
-import map2 from '../assets/images/download.gif'; // Import the image
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './MyCarousel.css'; // Import the CSS file
-import { useEffect } from 'react';
+import './MyCarousel.css';
+
+const API_KEY = 'sEmlRMkylz52wBy1OhX8Ma6gOkZnUah8'; // Updated API key
+const API_URL = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&rating=g`; // Fetch random GIFs
 
 function MyCarousel() {
+    const [gifs, setGifs] = useState([]);
 
     useEffect(() => {
         AOS.init({ duration: 2000 });
+        fetchGifs();
     }, []);
 
+    const fetchGifs = async () => {
+        try {
+            const fetchedGifs = [];
+            for (let i = 0; i < 5; i++) {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                fetchedGifs.push(data.data);
+            }
+            setGifs(fetchedGifs);
+        } catch (error) {
+            console.error('Error fetching GIFs:', error);
+        }
+    };
+
     return (
-        //  <img className="d-block w-100 carousel-image" src={"map"} alt="Galaxy slide" />
         <div className="carousel-container">
             <Carousel>
-                <Carousel.Item data-aos="fade-up">
-                    <img src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" />
-
-                    <Carousel.Caption>
-                        <h3 className="carousel-title">Galaxy Slide</h3>
-                        <p className="carousel-text">Explore the beauty of the galaxy.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100 carousel-image" src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" alt="Second slide" />
-                    <Carousel.Caption>
-                        <h3 className="carousel-title">Second Slide Label</h3>
-                        <p className="carousel-text">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100 carousel-image" src="https://windowscustomization.com/wp-content/uploads/2019/01/Blue-Connected-Particles.gif" alt="Third slide" />
-                    <Carousel.Caption>
-                        <h3 className="carousel-title">Third Slide Label</h3>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                {gifs.map((gif, index) => (
+                    <Carousel.Item key={gif.id} data-aos="fade-up">
+                        <img className="d-block w-100 carousel-image" src={gif.images.original.url} alt={`Slide ${index + 1}`} />
+                        <Carousel.Caption>
+                            <h3 className="carousel-title">Random Slide {index + 1}</h3>
+                            <p className="carousel-text">Random GIF from API</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
             </Carousel>
         </div>
     );
