@@ -10,7 +10,7 @@ export default function Html() {
 
   return (
     <div className='sub-page'>
-      <div className='sub-page-card text-white'>
+      <div className='sub-page-card text-white screen'>
         Info that helps at starting
       </div>
       {/* Use map to render images from the array */}

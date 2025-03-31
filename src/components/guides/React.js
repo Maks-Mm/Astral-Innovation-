@@ -4,7 +4,7 @@ export default function ReactPage() {
   return (
     <div className='sub-page'>
 
-      <div className='sub-page-card  text-white'>
+      <div className='sub-page-card  text-white screen '>
         <h3>📖 React Learning Guide</h3>
         🚀 What is React?
         <br></br>
@@ -12,7 +12,7 @@ export default function ReactPage() {
         React is a JavaScript library for building user interfaces (UI), developed by Facebook. It allows developers to create fast, scalable, and reusable UI components.
 
       </div>
-      <div className='sub-page-card  text-white'>
+      <div className='sub-page-card  text-white screen'>
       1️⃣ Component-Based Architecture
 
 React applications are built using reusable components.
@@ -27,7 +27,7 @@ function Greeting() {
 `return <h1>Hello, React!</h1>`
 }
       </div>
-      <div className='sub-page-card  text-white'>
+      <div className='sub-page-card  text-white screen'>
       2️⃣ Virtual DOM for Performance Optimization
 
 React uses a Virtual DOM to update only the necessary parts of the UI.
@@ -44,7 +44,7 @@ It compares changes using the Diffing Algorithm.
 
 It updates only the changed elements, not the entire DOM.
       </div>
-      <div className='sub-page-card  text-white'>
+      <div className='sub-page-card  text-white screen '>
       3️⃣ State Management with Hooks
 
     useState and useEffect allow functional components to handle dynamic data.

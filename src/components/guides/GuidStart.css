@@ -63,8 +63,24 @@ body {
 }
 .substrate{
   background-color: rgba(0,0,0,0.7);
-
   width: 100%;
   padding: 45px 60px;
   height: 100%;
+}
+/* Add this to your existing GuidStart.css */
+
+/* Flex container for the main card */
+.sub-page-card {
+
+}
+
+/* Style for the tutorial message */
+.tutorial-message {
+  flex: 1; /* Allow this section to take available space */
+  margin-right: 20px; /* Space between the message and iframe */
+}
+
+/* Style for the iframe container */
+.iframe-container {
+  flex: 1; /* Allow the iframe to take available space */
 }
