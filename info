@@ -38,8 +38,91 @@ i plane create a logo with click and going to scraping example name to the Logo,
 lest lection : we was looking for keys of api to our project 
 https://stackoverflow.com/questions/68660047/im-using-the-giphy-api-and-i-was-wondering-how-you-could-get-a-gifs-image-url
 
-the resours is with keys implemented 
+import React, { useEffect, useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './MyCarousel.css';
+import axios from 'axios'; // Use axios for HTTP requests
 
-now i must correct the logic while i new run to page refresh i m looking to a rondom fis ,this is good but if i click the carousel to lift ot to right i see nathing ,the logic is to correct i will make refresh und see new fifs not only whit i makw reset but also while i will click the left or right on carosul,new gifs 
+const GOOGLE_IMAGE_API_URL = 'https://serpapi.com/search.json'; // Example API (SerpAPI)
+const API_KEY = 'your-serpapi-key'; // Replace with your SerpAPI key
+const QUERY = 'programming'; // Example query parameter
 
-issue at styling background white field: i have a background to project with js html react css aios pi,and the project has a carousel with api photos with verios sizes  and in the time i have a component for background this is a animation with galaxy and if the gif is with big sizes the background hat a white field down 
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './MyCarousel.css';
+import axios from 'axios';
+import chario from 'chario';
+
+const GOOGLE_SEARCH_URL = 'https://www.google.com/search?client=firefox-b-d&sca_esv=afa94e21eef4b989&sxsrf=AHTn8zpmWWHfi1KI3AUjUm7yU6-5U1fR2A:1743512285173&q=css+icon&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RR_at5_YHtGBxniSnLjlDuuoW0oqC37nfi7AE8_ClkpQJOPe-zh2Szye0kgMKntaoJePAsxnuJ_6JWXbZGaSHVtt2TnXCaANjb1CfA8o4wYJax_SVD&udm=2&sa=X&ved=2ahUKEwiyiK2z8baMAxWx1QIHHZO0OJAQxKsJegQIERAB&ictx=0&biw=1536&bih=703&dpr=1.25';
+
+function MyCarousel() {
+    const [images, setImages] = useState([]);
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
+        console.log('AOS initialized');
+        fetchImagesFromGoogle();
+    }, []);
+
+    const fetchImagesFromGoogle = async () => {
+        try {
+            // Fetch the HTML of the page
+            const response = await axios.get(GOOGLE_SEARCH_URL, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                },
+            });
+
+            // Parse the HTML using chario
+            const $ = chario.load(response.data);
+
+            // Extract image URLs
+            const fetchedImages = [];
+            $('img').each((index, element) => {
+                const src = $(element).attr('src');
+                if (src && src.startsWith('http')) {
+                    fetchedImages.push(src);
+                }
+            });
+
+            setImages(fetchedImages);
+        } catch (error) {
+            console.error('Error fetching images from Google:', error);
+        }
+    };
+
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
+
+    return (
+        <div className="carousel-container">
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+                {images.map((image, idx) => (
+                    <Carousel.Item key={idx} data-aos="fade-up">
+                        <img
+                            className="d-block w-100 carousel-image"
+                            src={image}
+                            alt={`Slide ${idx + 1}`}
+                        />
+                        <Carousel.Caption>
+                            <h3 className="carousel-title">Image {idx + 1}</h3>
+                            <p className="carousel-text">Fetched from Google</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </div>
+    );
+}
+
+export default MyCarousel;
