@@ -1,6 +1,7 @@
 import React from 'react'
 import './Next.css'
 
+
 function Next() {
   return (
     <div className='sub-page'>
