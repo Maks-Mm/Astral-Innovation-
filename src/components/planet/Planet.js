@@ -1,12 +1,11 @@
 import React from 'react'
 import './Planet.css'
+import PhotoPlanet from '../../assets/images/earth-day.jpg'
 
 function Planet() {
   return (
-    <div>
+    <div className='planets'>
       Planet
-      <img  src="./assets/planet.png" alt="Planet" />
-      huj
     </div>
   )
 }
