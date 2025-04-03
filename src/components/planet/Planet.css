@@ -1,13 +1,15 @@
 
   
-  .wrapper {
-    width: 20vh;
+  .planet-position {
+    width: 30vh;
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
     box-shadow: -1rem -1rem 2rem #444, 1rem 1rem 2rem #444,
       inset 10rem 0 5rem #000, inset -1rem 0 2rem #c9c3c3;
+      top:-300px;
+      left: 50%;
   }
   
   .earth {
