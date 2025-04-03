@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUs.css"; 
-import Planet from "../planet/Planet"; // Import the Planet component
+
 
 function AboutUs() {
   return (
@@ -41,10 +41,7 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Right Section: Planet Component */}
-      <div className="w-full md:w-1/4 flex justify-center">
-        <Planet />
-      </div>
+     
     </div>
   );
 }

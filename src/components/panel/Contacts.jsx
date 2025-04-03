@@ -3,6 +3,7 @@ import { FaYoutube, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaViber, FaWhatsapp } from "react-icons/fa6";
 import "./Contacts.css"; // Import the CSS file
+import Planet from "../planet/Planet"; // Import the Planet component
 
 const contacts = [
   {
@@ -89,6 +90,10 @@ const Contacts = () => {
           </div>
         ))}
       </div>
+ {/* Right Section: Planet Component */}
+ <div className="w-full md:w-1/4 flex justify-center">
+ <Planet />
+</div>
     </div>
   );
 };
