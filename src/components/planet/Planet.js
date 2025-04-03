@@ -1,13 +1,13 @@
-import React from 'react'
-import './Planet.css'
-import PhotoPlanet from '../../assets/images/earth-day.jpg'
+import React from "react";
+import "./Planet.css";
 
-function Planet() {
+const Planet = () => {
   return (
-    <div className='planets'>
-      Planet
+    <div className="wrapper">
+      <div className="earth day"></div>
+      <div className="earth night"></div>
     </div>
-  )
-}
+  );
+};
 
-export default Planet
+export default Planet;
