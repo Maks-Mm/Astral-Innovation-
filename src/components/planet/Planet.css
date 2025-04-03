@@ -1,7 +1,7 @@
 
   
   .wrapper {
-    width: 30vh;
+    width: 20vh;
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
@@ -16,7 +16,7 @@
     border-radius: 50%;
     background-size: cover;
     position: absolute;
-    animation: earthAnim 25s infinite linear;
+    animation: earthAnim 75s infinite linear;
   }
   
   .day {

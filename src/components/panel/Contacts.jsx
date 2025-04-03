@@ -66,8 +66,8 @@ const Contacts = () => {
       <h1 className="title text-4xl font-bold text-blue-500 mb-4">Contacts</h1>
       <div className="grid">
         {contacts.map((contact) => (
-          <div key={contact.id} className="card">
-            <div className="card-header">
+          <div key={contact.id} className="cardEffect">
+            <div className="card-text">
               <h2>{contact.name}</h2>
               <p>{contact.phone}</p>
             </div>

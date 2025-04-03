@@ -2,8 +2,8 @@
 .glass-effect {
   backdrop-filter: blur(10px); /* Apply a blur effect */
   background: rgba(255, 255, 255, 0.1); /* White background with some transparency */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   border-radius: 10px; /* Rounded corners */
   padding: 16px; /* Inner padding */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
 }
