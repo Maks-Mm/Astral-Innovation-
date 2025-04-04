@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
+import Example from "../toAboutUs/Example";
 
 function AboutUs() {
   return (
@@ -27,17 +28,17 @@ function AboutUs() {
             <p className="text-lg text-white max-w-3xl">
               Welcome to Our Global Programming Community!
             </p>
-            <p className="text-lg text-white max-w-3xl mt-4">
+            <p className="text-lg text-white max-w-3xl mt-0.3">
               We are an international team of passionate developers and educators, dedicated
               to helping you understand programming through simple, clear, and effective steps.
             </p>
-            <p className="text-lg text-white max-w-3xl mt-4">
+            <p className="text-lg text-white max-w-3xl mt-0.3">
               Our platform is designed to support programmers of all levels—from beginners
               taking their first steps to experienced coders exploring new technologies.
               We focus on simplifying complex concepts, boosting creativity, and guiding you
               through the ever-evolving world of software development.
             </p>
-            <p className="text-lg text-white max-w-3xl mt-4">
+            <p className="text-lg text-white max-w-3xl mt-0.3">
               Join us today and become part of a vibrant, supportive network that values
               learning, collaboration, and growth in the tech industry!
             </p>
@@ -47,6 +48,7 @@ function AboutUs() {
 
       {/* Right Section: Placeholder for future content */}
       <div className="w-full md:w-1/4 lg:w-1/2">
+      <Example/>
         {/* Add your future components/content here */}
       </div>
     </div>
