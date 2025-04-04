@@ -7,3 +7,15 @@
   padding: 16px; /* Inner padding */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
 }
+
+.about-us-container {
+  font-size: 15px; /* Slightly smaller, default is usually 16px */
+  line-height: 1.6;
+  font-family: sans-serif; /* Or your chosen font */
+}
+
+.about-us-title {
+  font-size: 28px; /* Title size */
+  font-weight: bold;
+  color: #3b82f6; /* Tailwind's blue-500 */
+}

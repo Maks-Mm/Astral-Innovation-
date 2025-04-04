@@ -26,10 +26,11 @@ const images: Image[] = [
     alt: 'Description of image 3',
   },
   {
-    src: 'https://media.licdn.com/dms/image/v2/D5612AQFqSpDkLw1J-A/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1684611545713?e=2147483647&v=beta&t=DNeUrCAELYv4eVQk9axptvMYB5A2lFVTX6_wfXSET2I',
+    src: 'https://www.saagie.com/wp-content/uploads/elementor/thumbs/Visual-studio-code-q3vwi3jhzogc2dhdrll9o0u7d8hl95mpbwo9w8zsow.png',
     href: 'https://github.com/your-profile',
-    alt: 'Description of image 1',
+    alt: 'Description of image 3',
   },
+
   {
     src: 'https://assets-v2.lottiefiles.com/a/2a2a499e-116d-11ee-8f41-7f82227ba589/MIgBtJS610.gif',
     href: 'https://github.com/your-profile',
@@ -51,10 +52,11 @@ const images: Image[] = [
     alt: 'Description of image 2',
   },
   {
-    src: 'https://www.saagie.com/wp-content/uploads/elementor/thumbs/Visual-studio-code-q3vwi3jhzogc2dhdrll9o0u7d8hl95mpbwo9w8zsow.png',
+    src: 'https://media.licdn.com/dms/image/v2/D5612AQFqSpDkLw1J-A/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1684611545713?e=2147483647&v=beta&t=DNeUrCAELYv4eVQk9axptvMYB5A2lFVTX6_wfXSET2I',
     href: 'https://github.com/your-profile',
-    alt: 'Description of image 3',
+    alt: 'Description of image 1',
   },
+
   {
     src: 'https://media.tenor.com/F_aIpdp3hEwAAAAj/git-github.gif',
     href: 'https://github.com/your-profile',
@@ -65,7 +67,7 @@ const images: Image[] = [
     href: 'https://github.com/your-profile',
     alt: 'Description of image 3',
   },
-  
+
 ];
 
 // Create the ImageLinks component

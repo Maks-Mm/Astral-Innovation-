@@ -13,6 +13,8 @@
 }
 
 .sub-page-card {
+    width: 25%;
+    height: 30%;
     --a: 8deg;
     padding: 0;
     overflow: hidden;
