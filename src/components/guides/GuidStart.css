@@ -53,7 +53,8 @@ body {
   background-image: url('https://img.freepik.com/free-vector/led-screen-light-background-texture-with-pixel_107791-20972.jpg?t=st=1743259051~exp=1743262651~hmac=74c6c021314e1ee3b2c61de961c0b3b1fc1f3c207537f21e3b535bf7886bc5ee&w=1380');
   background-size: 100%;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 1rem;
   /* Semi-transparent black */
   background-blend-mode: overlay;
   /* Blends the image with the background */
@@ -70,9 +71,6 @@ body {
 /* Add this to your existing GuidStart.css */
 
 /* Flex container for the main card */
-.sub-page-card {
-
-}
 
 /* Style for the tutorial message */
 .tutorial-message {

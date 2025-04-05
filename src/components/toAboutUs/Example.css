@@ -20,7 +20,7 @@
 }
 
 .threePhoto {
-    background-image: url('https://e7.pngegg.com/pngimages/793/545/png-clipart-javascript-logo-computer-icons-vue-js-angle-text.png');
+    background-image: url('/public/js.png');
     margin-bottom: 100vh;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@
 }
 
 .fourPhoto {
-    background-image: url('https://camo.githubusercontent.com/9b9e56cb82fab413431c870de2d0cfd5977141a74f768a5e4d3ae6c4e31beb79/68747470733a2f2f77372e706e6777696e672e636f6d2f706e67732f3138352f3836362f706e672d7472616e73706172656e742d68746d6c2d6c6f676f2d68746d6c2d7765622d64657369676e2d7363616c61626c652d67726170686963732d776f726c642d776964652d7765622d6d61726b75702d6c616e67756167652d68746d6c352d69636f6e2d68642d6d697363656c6c616e656f75732d616e676c652d746578742e706e67');
+    background-image: url('/public/HTMLXL.png');
     margin-bottom: 100vh;
     background-size: cover;
     background-position: center;
@@ -43,7 +43,7 @@
     margin-bottom: 100vh;
 }
 .fivePhoto{
-    background-image: url('https://w7.pngwing.com/pngs/393/49/png-transparent-css-logo.png');
+    background-image: url('/public/CSS-removebg-preview.png');
     margin-bottom: 100vh;
     background-size: cover;
     background-position: center;

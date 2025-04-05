@@ -5,7 +5,7 @@ import './Next.css'
 function Next() {
     return (
         <div className='sub-page'>
-            <div className='tv-effect sub-page-card text-white'>
+            <div className='tv-effect card-css text-white'>
 
             </div>
             idea to create new tutorialsstructure of next.js
