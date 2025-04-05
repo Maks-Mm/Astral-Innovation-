@@ -15,7 +15,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -34,7 +34,7 @@
     border-radius: 12px;
     opacity: 0;
     transform: translateZ(0px) scale(0.95);
-    transition: 
+    transition:
         transform 0.6s ease,
         opacity 0.4s ease,
         box-shadow 0.4s ease;
@@ -56,16 +56,30 @@
 /* Set background images */
 .firstPhoto {
     background-image: url('/public/toExample.png');
-    transform: translateZ(0px) translateY(0px) rotateX(0deg); /* flat */
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    /* flat */
     opacity: 1;
     z-index: 1;
+
+
+    width: 42%;
+    height: 40vh;
+    position: absolute;
+    left: 35%;
+    top: 18%;
+    z-index: 1;
+    transform-style: preserve-3d;
+    transform: perspective(3000px) rotate(4deg) rotateY(-50deg) rotateZ(7deg);
 }
+
 .threePhoto {
     background-image: url('/public/js.png');
 }
+
 .fourPhoto {
     background-image: url('/public/HTMLXL.png');
 }
+
 .fivePhoto {
     background-image: url('/public/CSS-removebg-preview.png');
 }
@@ -75,14 +89,17 @@
     transform: translateZ(0px) translateY(0px) rotateX(0deg);
     opacity: 1;
 }
+
 .twoPhoto.active .threePhoto {
     transform: translateZ(60px) translateY(-100px) rotateX(-10deg);
     opacity: 1;
 }
+
 .twoPhoto.active .fourPhoto {
     transform: translateZ(90px) translateY(-140px) rotateX(-10deg);
     opacity: 1;
 }
+
 .twoPhoto.active .fivePhoto {
     transform: translateZ(120px) translateY(-180px) rotateX(-10deg);
     opacity: 1;
