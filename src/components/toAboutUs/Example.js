@@ -1,27 +1,23 @@
-import React from 'react';
-import './Example.css'; // Assuming you have a CSS file for styling
+import React, { useState } from 'react';
+import './Example.css';
 
 function Example() {
-    return (
-        <div>
+    const [active, setActive] = useState(false);
 
-            <div className='firstPhoto '>
-                <h2 style={{ padding: '20px' }}></h2>
-            </div>
-            <div className='twoPhoto'>
-                <h2 style={{ padding: '20px' }}></h2>
-            </div>
-            <div className='threePhoto'>
-                <h2 style={{ padding: '20px' }}></h2>
-            </div>
-            <div className='fourPhoto'>
-                <h2 style={{ padding: '20px' }}></h2>
-            </div>
-            <div className='fivePhoto'>
-                <h2 style={{ padding: '20px' }}></h2>
+    return (
+        <div className="container">
+            <div 
+                className={`twoPhoto ${active ? 'active' : ''}`} 
+                onMouseEnter={() => setActive(true)} 
+                onMouseLeave={() => setActive(false)}
+            >
+                <div className="holoLayer firstPhoto"></div>
+                <div className="holoLayer threePhoto"></div>
+                <div className="holoLayer fourPhoto"></div>
+                <div className="holoLayer fivePhoto"></div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Example
+export default Example;

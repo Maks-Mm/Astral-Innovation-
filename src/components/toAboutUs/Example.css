@@ -1,55 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1500px;
+}
+
+/* The laptop object */
+.twoPhoto {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background-image: url('/public/noteBoockToExample.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    overflow: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+/* Floating photo layers inside the screen */
+.holoLayer {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 20%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateZ(0px) scale(0.95);
+    transition: 
+        transform 0.6s ease,
+        opacity 0.4s ease,
+        box-shadow 0.4s ease;
+    box-shadow: 0 0 0 transparent;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Glow effect for a holographic look */
+.holoLayer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+    opacity: 0.4;
+}
+
+/* Set background images */
 .firstPhoto {
     background-image: url('/public/toExample.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 300px;
-    /* <-- this is the key */
+    transform: translateZ(0px) translateY(0px) rotateX(0deg); /* flat */
+    opacity: 1;
+    z-index: 1;
 }
-
-.twoPhoto {
-    background-image: url('/public/noteBoockToExample.png');
-    margin-bottom: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 300px;
-    /* <-- this is the key */
-}
-
 .threePhoto {
     background-image: url('/public/js.png');
-    margin-bottom: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 300px;
-    /* <-- this is the key */
-    margin-bottom: 100vh;
 }
-
 .fourPhoto {
     background-image: url('/public/HTMLXL.png');
-    margin-bottom: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 300px;
-    /* <-- this is the key */
-    margin-bottom: 100vh;
 }
-.fivePhoto{
+.fivePhoto {
     background-image: url('/public/CSS-removebg-preview.png');
-    margin-bottom: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 300px;
-    /* <-- this is the key */
-    margin-bottom: 100vh;
+}
+
+/* When laptop is activated, photos float upward */
+.twoPhoto.active .firstPhoto {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+}
+.twoPhoto.active .threePhoto {
+    transform: translateZ(60px) translateY(-100px) rotateX(-10deg);
+    opacity: 1;
+}
+.twoPhoto.active .fourPhoto {
+    transform: translateZ(90px) translateY(-140px) rotateX(-10deg);
+    opacity: 1;
+}
+.twoPhoto.active .fivePhoto {
+    transform: translateZ(120px) translateY(-180px) rotateX(-10deg);
+    opacity: 1;
 }
