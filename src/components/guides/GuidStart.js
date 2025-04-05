@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './GuidStart.css'; // Import the CSS file
 
 
@@ -18,12 +18,32 @@ export default function GuidStart() {
 
   ];
 
+
+  const text = "Welcome to the guides section! Here, you'll find not only detailed instructions on JavaScript, React, Node.js, and other technologies but also support from like-minded individuals. Our guides will help you understand the intricacies and inspire you to take on new projects. Join our community, share your experiences, and grow with us!";
+
+  const [screeText, setScreeText] = useState('');
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setScreeText((prev) => prev + text[index]);
+      console.log(index);
+      if (index > text.length - 1) {
+        clearInterval(interval);
+      } else {
+        setIndex((prev) => (prev + 1));
+
+      }
+    }, 30);
+    return () => clearInterval(interval);
+  }, [index, text]);
+
   return (
     <div className='sub-page'>
       <div className='sub-page-card text-white screen' >
-        <div className='substrate'>
-
-          Welcome to the guides section! Here, you'll find not only detailed instructions on JavaScript, React, Node.js, and other technologies but also support from like-minded individuals. Our guides will help you understand the intricacies and inspire you to take on new projects. Join our community, share your experiences, and grow with us!
+        <div className='substrate' >
+          {screeText} <span className='cursor blinking-text'>_</span>
         </div>
       </div>
       {/* Use map to render images from the array */}

@@ -61,12 +61,15 @@ body {
   color: white;
   opacity: 1;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+  transition: 1.0s;
 }
 .substrate{
   background-color: rgba(0,0,0,0.7);
   width: 100%;
   padding: 45px 60px;
   height: 100%;
+  padding:2rem;
+  text-align: left;
 }
 /* Add this to your existing GuidStart.css */
 
@@ -81,4 +84,18 @@ body {
 /* Style for the iframe container */
 .iframe-container {
   flex: 1; /* Allow the iframe to take available space */
+}
+.cursor{
+  font-weight: 900;
+
+}
+
+.blinking-text {
+  animation: blink 1s infinite;
+}
+
+/* Ключевые кадры анимации */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
