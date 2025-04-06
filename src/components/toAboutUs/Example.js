@@ -5,7 +5,7 @@ function Example() {
     const [active, setActive] = useState(false);
 
     return (
-        <div className="container">
+        <div className="">
             <div 
                 className={`twoPhoto ${active ? 'active' : ''}`} 
                 onMouseEnter={() => setActive(true)} 
