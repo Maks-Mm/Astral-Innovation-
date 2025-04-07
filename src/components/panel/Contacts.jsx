@@ -10,6 +10,7 @@ const contacts = [
     id: 1,
     name: "John Doe",
     phone: "+1 234 567 890",
+    image:"/Support.jpg",
     social: {
       youtube: "https://www.youtube.com/@johndoe",
       github: "https://github.com/johndoe",
@@ -24,6 +25,7 @@ const contacts = [
     id: 2,
     name: "Barse Nowicki",
     phone: "+44 789 654 321",
+    image:"/person-4.png",
     social: {
       youtube: "https://www.youtube.com/@janesmith",
       github: "https://github.com/janesmith",
@@ -38,6 +40,7 @@ const contacts = [
     id: 3,
     name: "Alex Brown",
     phone: "+33 123 456 789",
+    image:"/person-2.png",
     social: {
       youtube: "https://www.youtube.com/@alexbrown",
       github: "https://github.com/alexbrown",
@@ -63,14 +66,23 @@ const socialIcons = {
 const Contacts = () => {
   return (
     <div className="container">
-      <h1 className="title text-4xl font-bold text-blue-500 mb-4">Contacts</h1>
+      <h1 className="title text-4xl font-bold text-blue-500 mb-4">Support</h1>
       <div className="grid">
         {contacts.map((contact) => (
           <div key={contact.id} className="cardEffect">
+            {/* Images to persons of support */}
+             <div
+              className="imageSupport mb-4"
+              style={{ backgroundImage: `url(${contact.image})` }}
+            >
+
+            </div>
+
             <div className="card-text">
               <h2>{contact.name}</h2>
               <p>{contact.phone}</p>
             </div>
+
             <div className="social-media">
               <p>Social Media:</p>
               <div className="flex space-x-2">
