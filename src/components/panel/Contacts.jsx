@@ -10,7 +10,7 @@ const contacts = [
     id: 1,
     name: "John Doe",
     phone: "+1 234 567 890",
-    image:"/Support.jpg",
+    image: "/Support.jpg",
     social: {
       youtube: "https://www.youtube.com/@johndoe",
       github: "https://github.com/johndoe",
@@ -25,7 +25,7 @@ const contacts = [
     id: 2,
     name: "Barse Nowicki",
     phone: "+44 789 654 321",
-    image:"/person-4.png",
+    image: "/person-4.png",
     social: {
       youtube: "https://www.youtube.com/@janesmith",
       github: "https://github.com/janesmith",
@@ -40,7 +40,7 @@ const contacts = [
     id: 3,
     name: "Alex Brown",
     phone: "+33 123 456 789",
-    image:"/person-2.png",
+    image: "/person-2.png",
     social: {
       youtube: "https://www.youtube.com/@alexbrown",
       github: "https://github.com/alexbrown",
@@ -54,13 +54,13 @@ const contacts = [
 ];
 
 const socialIcons = {
-  youtube: <FaYoutube className="text-red-600" />, 
-  github: <FaGithub className="text-gray-800" />, 
-  gmail: <MdEmail className="text-blue-500" />, 
-  viber: <FaViber className="text-purple-500" />, 
-  whatsapp: <FaWhatsapp className="text-green-500" />, 
-  instagram: <FaInstagram className="text-pink-500" />, 
-  facebook: <FaFacebook className="text-blue-700" />, 
+  youtube: <FaYoutube className="text-red-600" />,
+  github: <FaGithub className="text-gray-800" />,
+  gmail: <MdEmail className="text-blue-500" />,
+  viber: <FaViber className="text-purple-500" />,
+  whatsapp: <FaWhatsapp className="text-green-500" />,
+  instagram: <FaInstagram className="text-pink-500" />,
+  facebook: <FaFacebook className="text-blue-700" />,
 };
 
 const Contacts = () => {
@@ -71,7 +71,7 @@ const Contacts = () => {
         {contacts.map((contact) => (
           <div key={contact.id} className="cardEffect">
             {/* Images to persons of support */}
-             <div
+            <div
               className="imageSupport mb-4"
               style={{ backgroundImage: `url(${contact.image})` }}
             >
@@ -102,10 +102,10 @@ const Contacts = () => {
           </div>
         ))}
       </div>
- {/* Right Section: Planet Component */}
- <div className="w-full md:w-1/4 flex justify-center">
- <Planet />
-</div>
+      {/* Right Section: Planet Component */}
+      <div className="w-full md:w-1/4 flex justify-center">
+        <Planet />
+      </div>
     </div>
   );
 };
