@@ -1,7 +1,7 @@
 .footer-container {
-  background-color: #2d3748; /* Background color for the footer */
+  background-color: #282828; /* Background color for the footer */
   color: white; /* Text color */
-  padding: 20px; /* Padding for the footer */
+  padding: 9px; /* Padding for the footer */
   text-align: center; /* Center text */
 }
 

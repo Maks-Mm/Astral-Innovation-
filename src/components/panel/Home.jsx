@@ -62,7 +62,7 @@ function Home() {
           )}
         </div>
       ) : (
-        <p>Please enter a technology to search.</p> // Prompt for the user when no search has been made
+        <p className="text-white">Please enter a technology to search.</p> // Prompt for the user when no search has been made
       )}
       <MyCarousel /> {/* Place the carousel here */}
     </div>

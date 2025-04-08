@@ -1,14 +1,12 @@
 import React from 'react';
-import './Footer.css'; // Ensure you import the CSS file
+import './Footer.css';
 
-// Define the type for the image object
 interface Image {
   src: string;
   href: string;
   alt: string;
 }
 
-// Define the images array
 const images: Image[] = [
   {
     src: 'https://media.tenor.com/94wsoEhGmUcAAAAM/atom-animation.gif',
@@ -70,7 +68,6 @@ const images: Image[] = [
 
 ];
 
-// Create the ImageLinks component
 const ImageLinks: React.FC = () => {
   return (
     <ul className="image-links"> {/* Added class name for styling */}
@@ -79,8 +76,8 @@ const ImageLinks: React.FC = () => {
           <a
             href={image.href}
             className="GitHub"
-            style={{ backgroundImage: `url(${image.src})` }} // Set the background image correctly
-            aria-label={image.alt} // Add alt text for accessibility
+            style={{ backgroundImage: `url(${image.src})` }} 
+            aria-label={image.alt} 
           >
             {/* You can add any content inside the link if necessary */}
           </a>
@@ -98,8 +95,8 @@ const Footer: React.FC = () => {
       </div>
       <footer className="footer">
         <div className="footer-content">
-          <ImageLinks /> {/* Integrating ImageLinks here */}
-          <p>&copy; 2025 All rights reserved</p>
+          <ImageLinks /> 
+        {/*<p>&copy; 2025 All rights reserved</p>*/}  
         </div>
       </footer>
     </div>
