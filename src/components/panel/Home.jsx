@@ -43,7 +43,9 @@ function Home() {
   return (
     <div className="home-container">
     
-      <h1 className="home-title glass-card-effect ">Welcome</h1>
+      <h1 className="top-picture">
+        <img src="toppicture.png" alt="Search Icon" className="search-icon" />
+      </h1>
       <Search onSearch={handleSearch} />
       {isSearching ? ( // Only show search results if searching
         <div className="search-results">

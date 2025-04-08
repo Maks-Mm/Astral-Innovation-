@@ -23,7 +23,7 @@ const contacts = [
   },
   {
     id: 2,
-    name: "Barse Nowicki",
+    name: "Nicole Schmidt",
     phone: "+44 789 654 321",
     image: "/person-4.png",
     social: {
@@ -38,7 +38,7 @@ const contacts = [
   },
   {
     id: 3,
-    name: "Alex Brown",
+    name: "Barse Nowicki",
     phone: "+33 123 456 789",
     image: "/person-2.png",
     social: {
