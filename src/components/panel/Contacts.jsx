@@ -3,7 +3,7 @@ import {
   FaYoutube,
   FaGithub,
   FaInstagram,
-  FaFacebook
+  FaFacebook,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaViber, FaWhatsapp } from "react-icons/fa6";
@@ -71,9 +71,7 @@ const socialIcons = {
 const Contacts = () => {
   return (
     <div className="container">
-      <h1 className="title text-4xl font-bold text-blue-500 mb-4">
-        Support
-      </h1>
+      <h1 className="title text-4xl font-bold text-blue-500 mb-4">Support</h1>
       <div className="w-full md:w-1/4 flex justify-center">
         <Planet />
       </div>
@@ -110,8 +108,6 @@ const Contacts = () => {
           </div>
         ))}
       </div>
-
-
     </div>
   );
 };
