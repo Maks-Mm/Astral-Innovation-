@@ -1,3 +1,17 @@
+.planet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.planet-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
 .planet-position {
   width: 30vh;
   aspect-ratio: 1;
@@ -6,8 +20,7 @@
   overflow: hidden;
   box-shadow: -1rem -1rem 2rem #444, 1rem 1rem 2rem #444,
     inset 10rem 0 5rem #000, inset -1rem 0 2rem #c9c3c3;
-  top: -650px;
-  left: 50%;
+  transform: translate(0, 0); /* No offset — appears normally */
 }
 
 .earth {
@@ -32,24 +45,19 @@
   0% {
     background-position: 0 center;
   }
-
   100% {
     background-position: 192rem center;
   }
 }
 
-.planet-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  margin:  0 600px 0 0;
+.planet-title {
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
 
-.planet-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 20px; /* Added margin-top for spacing */
+.slanted-text {
+  display: inline-block; /* Ensures the transform affects the text properly */
+  transform-origin: left; /* Adjusts the pivot point of the rotation */
 }

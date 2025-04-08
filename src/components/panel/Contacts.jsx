@@ -1,9 +1,14 @@
 import React from "react";
-import { FaYoutube, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import {
+  FaYoutube,
+  FaGithub,
+  FaInstagram,
+  FaFacebook
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaViber, FaWhatsapp } from "react-icons/fa6";
-import "./Contacts.css"; // Import the CSS file
-import Planet from "../planet/Planet"; // Import the Planet component
+import "./Contacts.css";
+import Planet from "../planet/Planet";
 
 const contacts = [
   {
@@ -66,17 +71,20 @@ const socialIcons = {
 const Contacts = () => {
   return (
     <div className="container">
-      <h1 className="title text-4xl font-bold text-blue-500 mb-4">Support</h1>
+      <h1 className="title text-4xl font-bold text-blue-500 mb-4">
+        Support
+      </h1>
+      <div className="w-full md:w-1/4 flex justify-center">
+        <Planet />
+      </div>
+
       <div className="grid">
         {contacts.map((contact) => (
           <div key={contact.id} className="cardEffect">
-            {/* Images to persons of support */}
             <div
               className="imageSupport mb-4"
               style={{ backgroundImage: `url(${contact.image})` }}
-            >
-
-            </div>
+            ></div>
 
             <div className="card-text">
               <h2>{contact.name}</h2>
@@ -102,10 +110,8 @@ const Contacts = () => {
           </div>
         ))}
       </div>
-      {/* Right Section: Planet Component */}
-      <div className="w-full md:w-1/4 flex justify-center">
-        <Planet />
-      </div>
+
+
     </div>
   );
 };
