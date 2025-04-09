@@ -15,7 +15,7 @@ function Technologies() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log("Fetched Technologies:", data); // Debugging
+        console.log("Fetched Technologies:", data); 
         setTechnologies(data);
       } catch (error) {
         setError(error.message);
