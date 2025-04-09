@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import AOS from "aos";
+//import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Card.css";
 

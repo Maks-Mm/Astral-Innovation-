@@ -40,9 +40,18 @@ function Home() {
     }
   };
 
+  // Function to handle mouse movement for glow effect
+  const handleMouseMove = (e) => {
+    const cards = document.querySelectorAll(".technology-card");
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+      card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+    });
+  };
+
   return (
-    <div className="home-container">
-    
+    <div className="home-container" onMouseMove={handleMouseMove}>
       <h1 className="top-picture">
         <img src="toppicture.png" alt="Search Icon" className="search-icon" />
       </h1>
@@ -51,7 +60,7 @@ function Home() {
         <div className="search-results">
           {results.length > 0 ? (
             results.map((item) => (
-              <div key={item.id} className="technology-card"> {/* Using the technology card style */}
+              <div key={item.id} className="technology-card">
                 <img src={item.imageUrl} alt={item.name} className="result-image" />
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
