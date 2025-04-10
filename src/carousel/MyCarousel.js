@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './MyCarousel.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const API_KEY = 'sEmlRMkylz52wBy1OhX8Ma6gOkZnUah8';
 const tag = 'programming';
@@ -71,8 +73,12 @@ function MyCarousel() {
                 })}
             </div>
             <div className="carousel-controls">
-                <button type="button" class="btn btn-link" onClick={rotateLeft}>{"<"}</button>
-                <button type="button" class="btn btn-link" onClick={rotateRight}>{">"}</button>
+                <button type="button" className="btn btn-link" onClick={rotateLeft}>
+                    <FontAwesomeIcon icon="arrow-left" />
+                </button>
+                <button type="button" className="btn btn-link" onClick={rotateRight}>
+                    <FontAwesomeIcon icon="arrow-right" />
+                </button>
             </div>
         </div>
     );
