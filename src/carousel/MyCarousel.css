@@ -77,4 +77,15 @@
   .carousel-controls button:hover {
     background-color: #555;
   }
+  .carousel-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* Adjust as necessary */
+    background: #eee;
+    color: #777;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
   
