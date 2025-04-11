@@ -33,7 +33,6 @@
     transition: opacity 0.5s;
   }
   
-  /* Caption styles */
   .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -55,10 +54,9 @@
     font-size: 14px;
   }
   
-  /* Control buttons */
   .carousel-controls {
     position: absolute;
-    bottom: 10px;
+    bottom: 3px;
     width: 100%;
     text-align: center;
   }
@@ -76,12 +74,13 @@
   
   .carousel-controls button:hover {
     background-color: #555;
+    color:white;
   }
   .carousel-placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px; /* Adjust as necessary */
+    height: 300px;
     background: #eee;
     color: #777;
     border-radius: 10px;

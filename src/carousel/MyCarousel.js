@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './MyCarousel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const API_KEY = 'sEmlRMkylz52wBy1OhX8Ma6gOkZnUah8';
@@ -74,10 +75,10 @@ function MyCarousel() {
             </div>
             <div className="carousel-controls">
                 <button type="button" className="btn btn-link" onClick={rotateLeft}>
-                    <FontAwesomeIcon icon="arrow-left" />
+                    <FontAwesomeIcon icon={faArrowLeft} />
                 </button>
                 <button type="button" className="btn btn-link" onClick={rotateRight}>
-                    <FontAwesomeIcon icon="arrow-right" />
+                    <FontAwesomeIcon icon={faArrowRight} />
                 </button>
             </div>
         </div>
