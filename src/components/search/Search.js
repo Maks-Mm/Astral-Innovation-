@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; 
-import "./Search.css"; 
+import "aos/dist/aos.css";
+import "./Search.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Correctly import the icon
 
 const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
@@ -40,7 +42,7 @@ const Search = ({ onSearch }) => {
         onKeyDown={(e) => (e.key === "Enter" ? handleSearch() : null)}
       />
       <button onClick={handleSearch} className="search-button">
-        Search
+        <FontAwesomeIcon icon={faMagnifyingGlass} /> {/* Use the imported icon */}
       </button>
 
       {stars.map((star) => (
