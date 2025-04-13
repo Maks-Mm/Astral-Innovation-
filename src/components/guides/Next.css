@@ -4,15 +4,72 @@
     background-repeat: no-repeat;
     background-position: center;
     background-position: 45% 59.6%; /* X Y */
-    
-    
 }
 .tv-effect img {
     max-width: 100%;
 }
+
+.tv-effect2 {
+    background-image: url('/public/TypeScript.png');
+    background-size: 95.9%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 45% 59.6%; /* X Y */
+}
+.tv-effect img {
+    max-width: 100%;
+}
+
+.tv-effect3 {
+    background-image: url('/public/Optimizing.jpeg');
+    background-size: 95.9%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 45% 59.6%; /* X Y */
+}
+.tv-effect img {
+    max-width: 100%;
+}
+
+.tv-effect4 {
+    background-image: url('/public/ChatGPTStylingNext.png');
+    background-size: 95.9%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 45% 59.6%; /* X Y */
+}
+.tv-effect img {
+    max-width: 100%;
+}
+.tv-effect5 {
+    background-image: url('/public/NextRouting.jpg');
+    background-size: 95.9%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 45% 59.6%; /* X Y */
+}
+.tv-effect img {
+    max-width: 100%;
+}
+.tv-effect6 {
+    background-image: url('/public/RenderingNext.jpg');
+    background-size: 95.9%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 45% 59.6%; /* X Y */
+}
+.tv-effect img {
+    max-width: 100%;
+}
+
+
+
+
+
+
 .card-css {
     width: 45%;
-    height: 30%;
+    height: 35%;
     --a: 8deg;
     padding: 0;
     overflow: hidden;
@@ -57,4 +114,3 @@
     max-width: 100px; /* Optional: Set a max-width for images to fit */
 }
 
-/* Keep your existing styles for other classes as they are */
