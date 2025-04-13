@@ -6,7 +6,7 @@ function Guides() {
   return (
     <div className="guides-container">
       <p className="guides-text bungee-tint-regular">
-        <marquee  scrollamount="2">
+        <marquee  scrollamount="4">
 
         <Link to="/guides/react">React </Link>
         <Link to="/guides/next">NEXT</Link>
