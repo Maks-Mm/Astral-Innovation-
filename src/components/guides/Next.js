@@ -3,15 +3,13 @@ import './Next.css';
 
 function Next() {
     return (
-        <div className='sub-page'>
-            <div className='tv-effect card-css text-white'></div>
-            <div className='image-container'>
+        <div className='sub-page relative'>
+            <div className='tv-effect card-css '>
+            </div>
+
+            <div className='image-container z-20 mt-10'>
                 <div className='top-image'>
-                    <img
-                        src="https://webclues-prod.s3.us-east-2.amazonaws.com/webcluesinfotech/1730802029807Frame%201261153554-min.jpg"
-                        alt="Main"
-                        className='image-large w-80 h-70 object-cover'
-                    />
+                   
                 </div>
                 {/* First Row: Three Images */}
                 <div className='image-row'>
