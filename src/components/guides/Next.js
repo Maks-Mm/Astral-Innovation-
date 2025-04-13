@@ -8,24 +8,28 @@ function Next() {
     const images = [
 
         {
-            src: "/TypeScript.png", // Correct path
-            link: ""
+            src: "/typescript.jpg", // Correct path
+            link: "https://www.typescriptlang.org/"
         },
         {
-            src: "/Optimizing.jpeg", // Correct path
-            link: "",
+            src: "/OptimizeNext.webp", // Correct path
+            link: "https://medium.com/@ignatovich.dm/optimizing-next-js-applications-a-concise-guide-a8167dfc8271",
         },
         {
-            src: "/ChatGPTStylingNext.png", // Correct path
-            link: "",
+            src: "/NextStyling.png", // Correct path
+            link: "https://nextjs.org/docs/app/building-your-application/styling/css-in-js",
         },
         {
-            src: "/NextRouting.jpg", // Correct path
-            link: "",
+            src: "/OptimizeNext.webp", // Correct path
+            link: "https://nextjs.org/docs/pages/building-your-application/routing",
         },
         {
-            src: "/RenderingNext.jpg", // Correct path
-            link: ""
+            src: "/NextRendering.png", // Correct path
+            link: "https://nextjs.org/docs/pages/building-your-application/rendering"
+        },
+        {
+            src: "/FetchingNext.jpg", // Correct path
+            link: "https://nextjs.org/docs/app/building-your-application/data-fetching/fetching"
         },
     ];
 
@@ -36,7 +40,7 @@ function Next() {
             </div>
             </div>
 
-            <div className='image-container z-20 mt-10'>
+            <div className='image-container z-20 mt-10 '>
     {images.map((image, index) => (
         <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
             <img src={image.src} alt={`img-${index + 1}`} className="sub-page-img" />
