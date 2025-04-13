@@ -3,114 +3,48 @@
     background-size: 95.9%;
     background-repeat: no-repeat;
     background-position: center;
-    background-position: 45% 59.6%; /* X Y */
+    background-position: 45% 59.6%;
+    
+    /* X Y */
 }
+
 .tv-effect img {
     max-width: 100%;
 }
-
-.tv-effect2 {
-    background-image: url('/public/TypeScript.png');
-    background-size: 95.9%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 45% 59.6%; /* X Y */
-}
-.tv-effect img {
-    max-width: 100%;
-}
-
-.tv-effect3 {
-    background-image: url('/public/Optimizing.jpeg');
-    background-size: 95.9%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 45% 59.6%; /* X Y */
-}
-.tv-effect img {
-    max-width: 100%;
-}
-
-.tv-effect4 {
-    background-image: url('/public/ChatGPTStylingNext.png');
-    background-size: 95.9%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 45% 59.6%; /* X Y */
-}
-.tv-effect img {
-    max-width: 100%;
-}
-.tv-effect5 {
-    background-image: url('/public/NextRouting.jpg');
-    background-size: 95.9%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 45% 59.6%; /* X Y */
-}
-.tv-effect img {
-    max-width: 100%;
-}
-.tv-effect6 {
-    background-image: url('/public/RenderingNext.jpg');
-    background-size: 95.9%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 45% 59.6%; /* X Y */
-}
-.tv-effect img {
-    max-width: 100%;
-}
-
-
-
-
-
-
 .card-css {
-    width: 45%;
-    height: 35%;
-    --a: 8deg;
-    padding: 0;
-    overflow: hidden;
-    border-radius: 20px;
     background-color: rgba(28, 27, 27, 0.21);
     transition: transform 0.5s ease;
-    transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
     -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250% 250%;
     position: relative;
 }
-.picture-next {
-    background-image: url('/public/NextToTest.png');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-blend-mode: overlay;
-    color: white;
-    opacity: 1;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-    height: 300px;
-    padding: 20px;
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.card-css {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    background-color: rgba(28, 27, 27, 0.21);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the image rows horizontally */
+.sub-page-img {
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
-
-.image-row {
-    display: flex;
-    justify-content: center; /* Center images within the row */
-    margin: 10px 0; /* Add some margin between rows */
-}
-
-.image-small {
-    margin: 0 5px; /* Add some spacing between images */
-    flex: 1; /* Ensure equal space for each image */
-    max-width: 100px; /* Optional: Set a max-width for images to fit */
-}
-
