@@ -53,7 +53,7 @@ function Home() {
   return (
     <div className="home-container" onMouseMove={handleMouseMove}>
       <h1 className="top-picture">
-        <img src="toppicture.png" alt="Search Icon" className="search-icon" />
+        <img src="toppicture1.png" alt="Search Icon" className="w-[900px] h-[245px]"  />
       </h1>
       <Search onSearch={handleSearch} />
       {isSearching ? ( // Only show search results if searching
